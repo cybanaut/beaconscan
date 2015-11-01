@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4917F2AD1BE5DF0E0054A646 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4917F2AC1BE5DF0E0054A646 /* Info.plist */; };
-		4928AA101BE5DDD100941155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4928AA0F1BE5DDD100941155 /* Main.storyboard */; };
-		4928AA121BE5DE0E00941155 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4928AA111BE5DE0E00941155 /* LaunchScreen.storyboard */; };
+		4917F2EF1BE5E32E0054A646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4917F2F11BE5E32E0054A646 /* Main.storyboard */; };
+		4917F2F21BE5E33A0054A646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4917F2F41BE5E33A0054A646 /* LaunchScreen.storyboard */; };
+		4917F2F51BE5E3600054A646 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4917F2F71BE5E3600054A646 /* Info.plist */; };
 		4976B7DE1BE5887A009E794E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4976B7DD1BE5887A009E794E /* AppDelegate.swift */; };
 		4976B7E01BE5887A009E794E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4976B7DF1BE5887A009E794E /* ViewController.swift */; };
 		4976B7E61BE5887A009E794E /* beaconscan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4976B7E41BE5887A009E794E /* beaconscan.xcdatamodeld */; };
@@ -36,9 +36,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4917F2AC1BE5DF0E0054A646 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4928AA0F1BE5DDD100941155 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		4928AA111BE5DE0E00941155 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4917F2F01BE5E32E0054A646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4917F2F31BE5E33A0054A646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4917F2F61BE5E3600054A646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		4917F2F91BE5E4D10054A646 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		4917F2FC1BE5E4D80054A646 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		4917F2FF1BE5EC710054A646 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		4917F3011BE5EC720054A646 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		4917F3021BE5EE420054A646 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hant"; path = "zh-Hant.lproj/Info.plist"; sourceTree = "<group>"; };
+		4917F3031BE5EE4A0054A646 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/Info.plist"; sourceTree = "<group>"; };
 		4976B7DA1BE5887A009E794E /* beaconscan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beaconscan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4976B7DD1BE5887A009E794E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4976B7DF1BE5887A009E794E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,10 +108,10 @@
 			children = (
 				4976B7DD1BE5887A009E794E /* AppDelegate.swift */,
 				4976B7DF1BE5887A009E794E /* ViewController.swift */,
-				4928AA0F1BE5DDD100941155 /* Main.storyboard */,
+				4917F2F11BE5E32E0054A646 /* Main.storyboard */,
 				4976B7E71BE5887A009E794E /* Assets.xcassets */,
-				4928AA111BE5DE0E00941155 /* LaunchScreen.storyboard */,
-				4917F2AC1BE5DF0E0054A646 /* Info.plist */,
+				4917F2F41BE5E33A0054A646 /* LaunchScreen.storyboard */,
+				4917F2F71BE5E3600054A646 /* Info.plist */,
 				4976B7E41BE5887A009E794E /* beaconscan.xcdatamodeld */,
 			);
 			path = beaconscan;
@@ -215,6 +221,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
+				"zh-Hans",
 			);
 			mainGroup = 4976B7D11BE5887A009E794E;
 			productRefGroup = 4976B7DB1BE5887A009E794E /* Products */;
@@ -233,10 +241,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4928AA121BE5DE0E00941155 /* LaunchScreen.storyboard in Resources */,
+				4917F2F21BE5E33A0054A646 /* LaunchScreen.storyboard in Resources */,
 				4976B7E81BE5887A009E794E /* Assets.xcassets in Resources */,
-				4917F2AD1BE5DF0E0054A646 /* Info.plist in Resources */,
-				4928AA101BE5DDD100941155 /* Main.storyboard in Resources */,
+				4917F2F51BE5E3600054A646 /* Info.plist in Resources */,
+				4917F2EF1BE5E32E0054A646 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +305,39 @@
 			targetProxy = 4976B7FD1BE5887A009E794E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4917F2F11BE5E32E0054A646 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4917F2F01BE5E32E0054A646 /* Base */,
+				4917F2FF1BE5EC710054A646 /* zh-Hant */,
+				4917F3011BE5EC720054A646 /* zh-Hans */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4917F2F41BE5E33A0054A646 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4917F2F31BE5E33A0054A646 /* Base */,
+				4917F2F91BE5E4D10054A646 /* zh-Hant */,
+				4917F2FC1BE5E4D80054A646 /* zh-Hans */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4917F2F71BE5E3600054A646 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4917F2F61BE5E3600054A646 /* Base */,
+				4917F3021BE5EE420054A646 /* zh-Hant */,
+				4917F3031BE5EE4A0054A646 /* zh-Hans */,
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4976B8031BE5887A009E794E /* Debug */ = {
@@ -386,7 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = beaconscan/Info.plist;
+				INFOPLIST_FILE = beaconscan/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.beaconscan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -397,7 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = beaconscan/Info.plist;
+				INFOPLIST_FILE = beaconscan/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.beaconscan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
