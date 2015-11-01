@@ -35,14 +35,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4928AA051BE5DA0100941155 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		4928AA071BE5DA6400941155 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		4928AA091BE5DA7800941155 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hant"; path = "zh-Hant.lproj/Info.plist"; sourceTree = "<group>"; };
+		4928AA0B1BE5DA7C00941155 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/Info.plist"; sourceTree = "<group>"; };
+		4928AA0D1BE5DB6F00941155 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		4928AA0E1BE5DBDC00941155 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4976B7DA1BE5887A009E794E /* beaconscan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beaconscan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4976B7DD1BE5887A009E794E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4976B7DF1BE5887A009E794E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4976B7E21BE5887A009E794E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4976B7E51BE5887A009E794E /* beaconscan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = beaconscan.xcdatamodel; sourceTree = "<group>"; };
 		4976B7E71BE5887A009E794E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4976B7EA1BE5887A009E794E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4976B7EC1BE5887A009E794E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4976B7F11BE5887A009E794E /* beaconscanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beaconscanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4976B7F51BE5887A009E794E /* beaconscanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beaconscanTests.swift; sourceTree = "<group>"; };
 		4976B7F71BE5887A009E794E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,7 +108,7 @@
 				4976B7E11BE5887A009E794E /* Main.storyboard */,
 				4976B7E71BE5887A009E794E /* Assets.xcassets */,
 				4976B7E91BE5887A009E794E /* LaunchScreen.storyboard */,
-				4976B7EC1BE5887A009E794E /* Info.plist */,
+				4928AA0A1BE5DA7800941155 /* Info.plist */,
 				4976B7E41BE5887A009E794E /* beaconscan.xcdatamodeld */,
 			);
 			path = beaconscan;
@@ -214,6 +218,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 4976B7D11BE5887A009E794E;
 			productRefGroup = 4976B7DB1BE5887A009E794E /* Products */;
@@ -297,10 +302,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4928AA0A1BE5DA7800941155 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4928AA091BE5DA7800941155 /* zh-Hant */,
+				4928AA0B1BE5DA7C00941155 /* zh-Hans */,
+				4928AA0D1BE5DB6F00941155 /* Base */,
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
 		4976B7E11BE5887A009E794E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4976B7E21BE5887A009E794E /* Base */,
+				4928AA051BE5DA0100941155 /* zh-Hans */,
+				4928AA071BE5DA6400941155 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -308,7 +325,7 @@
 		4976B7E91BE5887A009E794E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4976B7EA1BE5887A009E794E /* Base */,
+				4928AA0E1BE5DBDC00941155 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -352,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -391,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -488,6 +505,7 @@
 				4976B8071BE5887A009E794E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4976B8081BE5887A009E794E /* Build configuration list for PBXNativeTarget "beaconscanTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +514,7 @@
 				4976B80A1BE5887A009E794E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4976B80B1BE5887A009E794E /* Build configuration list for PBXNativeTarget "beaconscanUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +523,7 @@
 				4976B80D1BE5887A009E794E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

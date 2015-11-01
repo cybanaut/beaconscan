@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  beaconscan
 //
-//  Created by Keith Nevin on 2015-10-31.
+//  Created by Kim Mo on 2015-10-31.
 //  Copyright © 2015 Kim Mo. All rights reserved.
 //
 
