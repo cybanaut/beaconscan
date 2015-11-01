@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4917F2AD1BE5DF0E0054A646 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4917F2AC1BE5DF0E0054A646 /* Info.plist */; };
+		4928AA101BE5DDD100941155 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4928AA0F1BE5DDD100941155 /* Main.storyboard */; };
+		4928AA121BE5DE0E00941155 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4928AA111BE5DE0E00941155 /* LaunchScreen.storyboard */; };
 		4976B7DE1BE5887A009E794E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4976B7DD1BE5887A009E794E /* AppDelegate.swift */; };
 		4976B7E01BE5887A009E794E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4976B7DF1BE5887A009E794E /* ViewController.swift */; };
-		4976B7E31BE5887A009E794E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4976B7E11BE5887A009E794E /* Main.storyboard */; };
 		4976B7E61BE5887A009E794E /* beaconscan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4976B7E41BE5887A009E794E /* beaconscan.xcdatamodeld */; };
 		4976B7E81BE5887A009E794E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4976B7E71BE5887A009E794E /* Assets.xcassets */; };
-		4976B7EB1BE5887A009E794E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4976B7E91BE5887A009E794E /* LaunchScreen.storyboard */; };
 		4976B7F61BE5887A009E794E /* beaconscanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4976B7F51BE5887A009E794E /* beaconscanTests.swift */; };
 		4976B8011BE5887A009E794E /* beaconscanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4976B8001BE5887A009E794E /* beaconscanUITests.swift */; };
 /* End PBXBuildFile section */
@@ -35,16 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4928AA051BE5DA0100941155 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		4928AA071BE5DA6400941155 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
-		4928AA091BE5DA7800941155 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hant"; path = "zh-Hant.lproj/Info.plist"; sourceTree = "<group>"; };
-		4928AA0B1BE5DA7C00941155 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/Info.plist"; sourceTree = "<group>"; };
-		4928AA0D1BE5DB6F00941155 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
-		4928AA0E1BE5DBDC00941155 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4917F2AC1BE5DF0E0054A646 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4928AA0F1BE5DDD100941155 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4928AA111BE5DE0E00941155 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4976B7DA1BE5887A009E794E /* beaconscan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beaconscan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4976B7DD1BE5887A009E794E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4976B7DF1BE5887A009E794E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4976B7E21BE5887A009E794E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4976B7E51BE5887A009E794E /* beaconscan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = beaconscan.xcdatamodel; sourceTree = "<group>"; };
 		4976B7E71BE5887A009E794E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4976B7F11BE5887A009E794E /* beaconscanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beaconscanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,10 +102,10 @@
 			children = (
 				4976B7DD1BE5887A009E794E /* AppDelegate.swift */,
 				4976B7DF1BE5887A009E794E /* ViewController.swift */,
-				4976B7E11BE5887A009E794E /* Main.storyboard */,
+				4928AA0F1BE5DDD100941155 /* Main.storyboard */,
 				4976B7E71BE5887A009E794E /* Assets.xcassets */,
-				4976B7E91BE5887A009E794E /* LaunchScreen.storyboard */,
-				4928AA0A1BE5DA7800941155 /* Info.plist */,
+				4928AA111BE5DE0E00941155 /* LaunchScreen.storyboard */,
+				4917F2AC1BE5DF0E0054A646 /* Info.plist */,
 				4976B7E41BE5887A009E794E /* beaconscan.xcdatamodeld */,
 			);
 			path = beaconscan;
@@ -218,7 +215,6 @@
 			knownRegions = (
 				en,
 				Base,
-				"zh-Hans",
 			);
 			mainGroup = 4976B7D11BE5887A009E794E;
 			productRefGroup = 4976B7DB1BE5887A009E794E /* Products */;
@@ -237,9 +233,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4976B7EB1BE5887A009E794E /* LaunchScreen.storyboard in Resources */,
+				4928AA121BE5DE0E00941155 /* LaunchScreen.storyboard in Resources */,
 				4976B7E81BE5887A009E794E /* Assets.xcassets in Resources */,
-				4976B7E31BE5887A009E794E /* Main.storyboard in Resources */,
+				4917F2AD1BE5DF0E0054A646 /* Info.plist in Resources */,
+				4928AA101BE5DDD100941155 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,37 +297,6 @@
 			targetProxy = 4976B7FD1BE5887A009E794E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		4928AA0A1BE5DA7800941155 /* Info.plist */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4928AA091BE5DA7800941155 /* zh-Hant */,
-				4928AA0B1BE5DA7C00941155 /* zh-Hans */,
-				4928AA0D1BE5DB6F00941155 /* Base */,
-			);
-			name = Info.plist;
-			sourceTree = "<group>";
-		};
-		4976B7E11BE5887A009E794E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4976B7E21BE5887A009E794E /* Base */,
-				4928AA051BE5DA0100941155 /* zh-Hans */,
-				4928AA071BE5DA6400941155 /* zh-Hant */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4976B7E91BE5887A009E794E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4928AA0E1BE5DBDC00941155 /* en */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4976B8031BE5887A009E794E /* Debug */ = {
