@@ -20,6 +20,8 @@
 		FB2BA90C1BE7B88100CC110B /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2BA90B1BE7B88100CC110B /* HomeTableViewController.swift */; };
 		FB2BA90E1BE7C14500CC110B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2BA90D1BE7C14500CC110B /* SettingViewController.swift */; };
 		FB2BA9101BE7C2C700CC110B /* LaiSeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2BA90F1BE7C2C700CC110B /* LaiSeeViewController.swift */; };
+		FB94B1431BE8310600D3E5DC /* LaiSeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1421BE8310600D3E5DC /* LaiSeeTableViewController.swift */; };
+		FB94B1451BE8319500D3E5DC /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1441BE8319500D3E5DC /* PersonalInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		FB2BA90B1BE7B88100CC110B /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewController.swift; path = view/HomeTableViewController.swift; sourceTree = "<group>"; };
 		FB2BA90D1BE7C14500CC110B /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = view/SettingViewController.swift; sourceTree = "<group>"; };
 		FB2BA90F1BE7C2C700CC110B /* LaiSeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaiSeeViewController.swift; path = view/LaiSeeViewController.swift; sourceTree = "<group>"; };
+		FB94B1421BE8310600D3E5DC /* LaiSeeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaiSeeTableViewController.swift; path = view/LaiSeeTableViewController.swift; sourceTree = "<group>"; };
+		FB94B1441BE8319500D3E5DC /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonalInfoViewController.swift; path = view/PersonalInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 				FB2BA90B1BE7B88100CC110B /* HomeTableViewController.swift */,
 				FB2BA90D1BE7C14500CC110B /* SettingViewController.swift */,
 				FB2BA90F1BE7C2C700CC110B /* LaiSeeViewController.swift */,
+				FB94B1421BE8310600D3E5DC /* LaiSeeTableViewController.swift */,
+				FB94B1441BE8319500D3E5DC /* PersonalInfoViewController.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -284,7 +290,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				499F0B6A1BE68761005D9D84 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +297,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				499F0B651BE68761005D9D84 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,8 +311,10 @@
 				4976B7E01BE5887A009E794E /* ViewController.swift in Sources */,
 				4976B7DE1BE5887A009E794E /* AppDelegate.swift in Sources */,
 				4976B7E61BE5887A009E794E /* beaconscan.xcdatamodeld in Sources */,
+				FB94B1431BE8310600D3E5DC /* LaiSeeTableViewController.swift in Sources */,
 				FB2BA9091BE7AC9500CC110B /* SWRevealViewController.m in Sources */,
 				FB2BA90C1BE7B88100CC110B /* HomeTableViewController.swift in Sources */,
+				FB94B1451BE8319500D3E5DC /* PersonalInfoViewController.swift in Sources */,
 				FB2BA90E1BE7C14500CC110B /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +380,6 @@
 		499F0B671BE68761005D9D84 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				499F0B661BE68761005D9D84 /* zh-Hans */,
 				496D6BF61BE687E700DA350B /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
@@ -383,7 +388,6 @@
 		499F0B6C1BE68761005D9D84 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				499F0B6B1BE68761005D9D84 /* zh-Hans */,
 				496D6BF71BE687E700DA350B /* zh-Hant */,
 			);
 			name = InfoPlist.strings;

@@ -1,5 +1,5 @@
 //
-//  LaiSeeViewController.swift
+//  PersonalInfoViewController.swift
 //  beaconscan
 //
 //  Created by waynehui on 3/11/15.
@@ -8,11 +8,17 @@
 
 import UIKit
 
-class LaiSeeViewController: UIViewController {
+class PersonalInfoViewController: UIViewController {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
