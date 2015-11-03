@@ -51,3 +51,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
 }
 
+class ViewInfo {
+    var title: String!
+    var segue:  String!
+    var description:  String!
+    var image: String!
+    
+    init(title: String, segue: String){
+        self.title = title
+        self.segue = segue
+    }
+    
+    init(title: String, segue: String, description: String){
+        self.title = title
+        self.segue = segue
+        self.description = description
+    }
+    
+    init(title: String, segue: String, description: String, image: String){
+        self.title = title
+        self.segue = segue
+        self.description = description
+        self.image = image
+    }
+}
