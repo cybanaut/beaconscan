@@ -30,9 +30,9 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.dataSource = self
         
         viewLinks = [ViewInfo]()
-        viewLinks.append(ViewInfo(title: "Shop 1", segue: "shop" ,description: "Get sports equipment here"))
-        viewLinks.append(ViewInfo(title: "Shop 2", segue: "category", description: "Christmas toys on sale now"))
-        viewLinks.append(ViewInfo(title: "Shop 3", segue: "cart", description: "Biggest Bookstore in town"))
+        viewLinks.append(ViewInfo(title: "Shop 1", segue: "shop" ,description: "Get sports equipment here", image: ""))
+        viewLinks.append(ViewInfo(title: "Shop 2", segue: "category", description: "Christmas toys on sale now", image: ""))
+        viewLinks.append(ViewInfo(title: "Shop 3", segue: "cart", description: "Biggest Bookstore in town", image: ""))
         
         let rightItem = UIActivityIndicatorView( activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
         rightItem.startAnimating()
@@ -72,12 +72,12 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         let info = viewLinks[indexPath.row]
         cell.titleLabel.text = info.title
         cell.subtitleLabel.text = info.description
-        /*
+        
         let url = NSURL(string: info.image!)
         let data = NSData(contentsOfURL: url!)
         if data != nil {
-            cell.shopLogo.image = UIImage(data:data!)
-        }*/
+            cell.logo.image = UIImage(data:data!)
+        }
         
         
         
