@@ -10,7 +10,7 @@ import Foundation
 
 class Retailer {
     
-    var retail_id : Int!
+    var retailer_id : Int!
     var name : String!
     var location : String!
     var telephone : String!
@@ -22,7 +22,7 @@ class Retailer {
     
     init(data : NSDictionary){
         
-        self.retail_id = data["retailer_id"] as! Int
+        self.retailer_id = data["retailer_id"] as! Int
         self.name = Utils.getStringFromJSON(data, key: "name")
         self.location = Utils.getStringFromJSON(data, key: "location")
         self.telephone = Utils.getStringFromJSON(data, key: "telephone")

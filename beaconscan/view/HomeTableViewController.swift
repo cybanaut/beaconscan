@@ -118,7 +118,7 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         //let info = viewLinks[indexPath.row]
-        //self .performSegueWithIdentifier(info.segue, sender: self)
+        //self .performSegueWithIdentifier("retailerPage", sender: self)
     }
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
