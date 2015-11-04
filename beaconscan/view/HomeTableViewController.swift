@@ -21,7 +21,10 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         49375: UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
     ]
     
-    var viewLinks : [ViewInfo]!
+    var retailers : [Retailer]!
+    var api : InfuseAPI!
+    
+    //var viewLinks : [ViewInfo]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +32,16 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         
+        /*
         viewLinks = [ViewInfo]()
         viewLinks.append(ViewInfo(title: "Shop 1", segue: "shop" ,description: "Get sports equipment here", image: ""))
         viewLinks.append(ViewInfo(title: "Shop 2", segue: "category", description: "Christmas toys on sale now", image: ""))
         viewLinks.append(ViewInfo(title: "Shop 3", segue: "cart", description: "Biggest Bookstore in town", image: ""))
+        */
+        self.retailers = [Retailer]()
+        self.api = InfuseAPI()
+        
+        getRetailers()
         
         let rightItem = UIActivityIndicatorView( activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
         rightItem.startAnimating()
@@ -62,24 +71,45 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func didGetRetails(getRetailer: [Retailer]){
+        
+        for retailer in getRetailer {
+            self.retailers.append(retailer)
+        }
+        tableView.reloadData()
+    }
+    
+    func getRetailers(){
+        api.getRetailer("", language: "", completion: didGetRetails)
+        
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewLinks.count;
+       // return viewLinks.count;
+        return retailers.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MetaCell") as! MetaCell
         
-        let info = viewLinks[indexPath.row]
+        /*let info = viewLinks[indexPath.row]
         cell.titleLabel.text = info.title
         cell.subtitleLabel.text = info.description
-        
         let url = NSURL(string: info.image!)
         let data = NSData(contentsOfURL: url!)
         if data != nil {
             cell.logo.image = UIImage(data:data!)
+        }*/
+        
+        let info = retailers[indexPath.row]
+        cell.titleLabel.text = info.name
+        cell.subtitleLabel.text = info.short_description
+        let url = NSURL(string: info.cover_photo!)
+        let data = NSData(contentsOfURL: url!)
+        if data != nil {
+            cell.logo.image = UIImage(data:data!)
         }
-        
-        
         
         
         return cell;
@@ -87,8 +117,8 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let info = viewLinks[indexPath.row]
-        self .performSegueWithIdentifier(info.segue, sender: self)
+        //let info = viewLinks[indexPath.row]
+        //self .performSegueWithIdentifier(info.segue, sender: self)
     }
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {

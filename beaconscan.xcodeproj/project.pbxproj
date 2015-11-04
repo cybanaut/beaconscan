@@ -38,6 +38,9 @@
 		FB94B1931BE9198700D3E5DC /* ConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1821BE9198700D3E5DC /* ConnectionCell.swift */; };
 		FB94B1941BE9198700D3E5DC /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1831BE9198700D3E5DC /* PictureCell.swift */; };
 		FB94B1951BE9198700D3E5DC /* MegaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1851BE9198700D3E5DC /* MegaTheme.swift */; };
+		FB94B1981BE9AD1C00D3E5DC /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1971BE9AD1C00D3E5DC /* utils.swift */; };
+		FB94B19A1BE9B00800D3E5DC /* Retailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1991BE9B00800D3E5DC /* Retailer.swift */; };
+		FB94B19C1BEA310F00D3E5DC /* InfuseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B19B1BEA310F00D3E5DC /* InfuseAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +103,9 @@
 		FB94B1821BE9198700D3E5DC /* ConnectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionCell.swift; sourceTree = "<group>"; };
 		FB94B1831BE9198700D3E5DC /* PictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		FB94B1851BE9198700D3E5DC /* MegaTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MegaTheme.swift; sourceTree = "<group>"; };
+		FB94B1971BE9AD1C00D3E5DC /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = utils.swift; path = Utils/utils.swift; sourceTree = "<group>"; };
+		FB94B1991BE9B00800D3E5DC /* Retailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Retailer.swift; path = Utils/Retailer.swift; sourceTree = "<group>"; };
+		FB94B19B1BEA310F00D3E5DC /* InfuseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfuseAPI.swift; path = InfuseAPI/InfuseAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,8 @@
 		4976B7DC1BE5887A009E794E /* beaconscan */ = {
 			isa = PBXGroup;
 			children = (
+				FB94B19D1BEA316600D3E5DC /* InfuseAPI */,
+				FB94B1961BE9ACEA00D3E5DC /* Utils */,
 				FB94B16E1BE9198700D3E5DC /* Cells */,
 				FB94B1841BE9198700D3E5DC /* Theme */,
 				FB2BA90A1BE7B85F00CC110B /* view */,
@@ -287,6 +295,23 @@
 			path = beaconscan/Theme;
 			sourceTree = SOURCE_ROOT;
 		};
+		FB94B1961BE9ACEA00D3E5DC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FB94B1971BE9AD1C00D3E5DC /* utils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		FB94B19D1BEA316600D3E5DC /* InfuseAPI */ = {
+			isa = PBXGroup;
+			children = (
+				FB94B19B1BEA310F00D3E5DC /* InfuseAPI.swift */,
+				FB94B1991BE9B00800D3E5DC /* Retailer.swift */,
+			);
+			name = InfuseAPI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -355,6 +380,7 @@
 				TargetAttributes = {
 					4976B7D91BE5887A009E794E = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 34JL6X48Z9;
 					};
 					4976B7F01BE5887A009E794E = {
 						CreatedOnToolsVersion = 7.1;
@@ -423,9 +449,11 @@
 			files = (
 				FB94B1941BE9198700D3E5DC /* PictureCell.swift in Sources */,
 				FB2BA9101BE7C2C700CC110B /* LaiSeeViewController.swift in Sources */,
+				FB94B19C1BEA310F00D3E5DC /* InfuseAPI.swift in Sources */,
 				4976B7E01BE5887A009E794E /* ViewController.swift in Sources */,
 				FB94B1881BE9198700D3E5DC /* CategoryCell.swift in Sources */,
 				4976B7DE1BE5887A009E794E /* AppDelegate.swift in Sources */,
+				FB94B19A1BE9B00800D3E5DC /* Retailer.swift in Sources */,
 				FB94B1921BE9198700D3E5DC /* TimelineCell.swift in Sources */,
 				4976B7E61BE5887A009E794E /* beaconscan.xcdatamodeld in Sources */,
 				FB94B1431BE8310600D3E5DC /* LaiSeeTableViewController.swift in Sources */,
@@ -440,6 +468,7 @@
 				FB94B18F1BE9198700D3E5DC /* NavigationFullCell.swift in Sources */,
 				FB94B1951BE9198700D3E5DC /* MegaTheme.swift in Sources */,
 				FB94B1901BE9198700D3E5DC /* NavigationSideCell.swift in Sources */,
+				FB94B1981BE9AD1C00D3E5DC /* utils.swift in Sources */,
 				FB94B1891BE9198700D3E5DC /* ProductCell.swift in Sources */,
 				FB94B18B1BE9198700D3E5DC /* AlbumCell.swift in Sources */,
 				FB94B18A1BE9198700D3E5DC /* ProductImageCell.swift in Sources */,
@@ -614,10 +643,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = beaconscan/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.beaconscan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "beaconscan/beaconscan-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -628,10 +660,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = beaconscan/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.beaconscan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "beaconscan/beaconscan-Bridging-Header.h";
 			};
 			name = Release;

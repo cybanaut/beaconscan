@@ -576,7 +576,7 @@
                             <rect key="frame" x="0.0" y="22" width="600" height="54"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="029-Zm-9sa" id="ufW-5h-YE3">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="53.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIk-Gc-AyD">
@@ -635,7 +635,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="TqY-UO-9Sm" customClass="ProductCell" customModule="beaconscan" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="209" height="221"/>
+                                        <rect key="frame" x="0.0" y="114" width="209" height="221"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="209" height="221"/>
@@ -697,7 +697,7 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopHeaderView" id="hd1-aJ-eV8">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                    <rect key="frame" x="0.0" y="64" width="600" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPJ-2o-eAE">
@@ -744,7 +744,7 @@
                             <tableViewSection id="6wM-lh-3Lr">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="119" id="7zd-6k-xdJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
+                                        <rect key="frame" x="0.0" y="64" width="600" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7zd-6k-xdJ" id="L5W-Zk-GYq">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
@@ -763,7 +763,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="52" id="ahh-W0-VeQ">
-                                        <rect key="frame" x="0.0" y="119" width="600" height="52"/>
+                                        <rect key="frame" x="0.0" y="183" width="600" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ahh-W0-VeQ" id="60B-tg-8Yd">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
@@ -807,7 +807,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="52" id="afe-ME-Tjh">
-                                        <rect key="frame" x="0.0" y="171" width="600" height="52"/>
+                                        <rect key="frame" x="0.0" y="235" width="600" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="afe-ME-Tjh" id="dg2-c6-XEE">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
@@ -885,7 +885,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="52" id="nr6-hE-Fdm">
-                                        <rect key="frame" x="0.0" y="223" width="600" height="52"/>
+                                        <rect key="frame" x="0.0" y="287" width="600" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nr6-hE-Fdm" id="ArY-go-wVC">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
@@ -906,7 +906,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="52" id="4gF-aq-yhp">
-                                        <rect key="frame" x="0.0" y="275" width="600" height="52"/>
+                                        <rect key="frame" x="0.0" y="339" width="600" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4gF-aq-yhp" id="kqS-Mt-cRp">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
@@ -1022,6 +1022,7 @@
                     <connections>
                         <outlet property="menuButton" destination="Yh6-AH-Sez" id="lFI-hr-2WE"/>
                         <outlet property="tableView" destination="mvW-H3-fwn" id="bQE-gX-Awv"/>
+                        <segue destination="ZAs-J1-SQE" kind="show" identifier="retailerHome" action="showDetailViewController:sender:" id="RTK-pl-eSt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftL-Ex-vU2" sceneMemberID="firstResponder"/>
