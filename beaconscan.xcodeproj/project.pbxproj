@@ -39,8 +39,8 @@
 		FB94B1941BE9198700D3E5DC /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1831BE9198700D3E5DC /* PictureCell.swift */; };
 		FB94B1951BE9198700D3E5DC /* MegaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1851BE9198700D3E5DC /* MegaTheme.swift */; };
 		FB94B1981BE9AD1C00D3E5DC /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1971BE9AD1C00D3E5DC /* utils.swift */; };
-		FB94B19A1BE9B00800D3E5DC /* Retailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1991BE9B00800D3E5DC /* Retailer.swift */; };
 		FB94B19C1BEA310F00D3E5DC /* InfuseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B19B1BEA310F00D3E5DC /* InfuseAPI.swift */; };
+		FB94B1A11BEA424600D3E5DC /* Retailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1A01BEA424600D3E5DC /* Retailer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,8 +104,8 @@
 		FB94B1831BE9198700D3E5DC /* PictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		FB94B1851BE9198700D3E5DC /* MegaTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MegaTheme.swift; sourceTree = "<group>"; };
 		FB94B1971BE9AD1C00D3E5DC /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = utils.swift; path = Utils/utils.swift; sourceTree = "<group>"; };
-		FB94B1991BE9B00800D3E5DC /* Retailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Retailer.swift; path = Utils/Retailer.swift; sourceTree = "<group>"; };
 		FB94B19B1BEA310F00D3E5DC /* InfuseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfuseAPI.swift; path = InfuseAPI/InfuseAPI.swift; sourceTree = "<group>"; };
+		FB94B1A01BEA424600D3E5DC /* Retailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Retailer.swift; path = Utils/Retailer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,7 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				FB94B19B1BEA310F00D3E5DC /* InfuseAPI.swift */,
-				FB94B1991BE9B00800D3E5DC /* Retailer.swift */,
+				FB94B1A01BEA424600D3E5DC /* Retailer.swift */,
 			);
 			name = InfuseAPI;
 			sourceTree = "<group>";
@@ -453,7 +453,6 @@
 				4976B7E01BE5887A009E794E /* ViewController.swift in Sources */,
 				FB94B1881BE9198700D3E5DC /* CategoryCell.swift in Sources */,
 				4976B7DE1BE5887A009E794E /* AppDelegate.swift in Sources */,
-				FB94B19A1BE9B00800D3E5DC /* Retailer.swift in Sources */,
 				FB94B1921BE9198700D3E5DC /* TimelineCell.swift in Sources */,
 				4976B7E61BE5887A009E794E /* beaconscan.xcdatamodeld in Sources */,
 				FB94B1431BE8310600D3E5DC /* LaiSeeTableViewController.swift in Sources */,
@@ -469,6 +468,7 @@
 				FB94B1951BE9198700D3E5DC /* MegaTheme.swift in Sources */,
 				FB94B1901BE9198700D3E5DC /* NavigationSideCell.swift in Sources */,
 				FB94B1981BE9AD1C00D3E5DC /* utils.swift in Sources */,
+				FB94B1A11BEA424600D3E5DC /* Retailer.swift in Sources */,
 				FB94B1891BE9198700D3E5DC /* ProductCell.swift in Sources */,
 				FB94B18B1BE9198700D3E5DC /* AlbumCell.swift in Sources */,
 				FB94B18A1BE9198700D3E5DC /* ProductImageCell.swift in Sources */,
