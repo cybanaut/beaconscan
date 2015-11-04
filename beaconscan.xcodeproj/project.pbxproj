@@ -301,7 +301,8 @@
 				FB94B1971BE9AD1C00D3E5DC /* utils.swift */,
 			);
 			name = Utils;
-			sourceTree = "<group>";
+			path = beaconscan;
+			sourceTree = SOURCE_ROOT;
 		};
 		FB94B19D1BEA316600D3E5DC /* InfuseAPI */ = {
 			isa = PBXGroup;
@@ -310,7 +311,8 @@
 				FB94B1A01BEA424600D3E5DC /* Retailer.swift */,
 			);
 			name = InfuseAPI;
-			sourceTree = "<group>";
+			path = beaconscan;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
