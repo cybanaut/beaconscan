@@ -202,6 +202,9 @@
                                     <segment title="Femail"/>
                                     <segment title="Not Disclosed"/>
                                 </segments>
+                                <connections>
+                                    <action selector="selectGender:" destination="Axr-95-dRK" eventType="valueChanged" id="WTB-pY-Zvk"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Age Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNQ-dr-dH7">
                                 <rect key="frame" x="20" y="288" width="335" height="21"/>
@@ -236,7 +239,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="ageGroupPicker" destination="XnQ-gZ-YZH" id="ffB-AJ-fHk"/>
+                        <outlet property="demoModeLabel" destination="GLI-58-Llw" id="ifi-nd-gFI"/>
+                        <outlet property="genderSegment" destination="dfP-Yn-QUO" id="ode-Tl-rQf"/>
                         <outlet property="menuButton" destination="mDB-67-i2X" id="zle-bl-rZO"/>
+                        <outlet property="selectModeSwitch" destination="pEZ-GD-aX0" id="gJ8-hM-TKT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGo-yV-ZM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
