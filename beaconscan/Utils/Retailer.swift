@@ -20,6 +20,8 @@ class Retailer {
     var long_description : String!
     var status : String!
     
+    var thumbnailData : NSData?
+    
     init(data : NSDictionary){
         
         self.retailer_id = data["retailer_id"] as! Int

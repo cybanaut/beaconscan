@@ -12,6 +12,27 @@ import UIKit
 
 class Utils {
 
+    class func asyncLoadRetailerThumbnail(retailer: Retailer, imageView : UIImageView){
+        
+        let downloadQueue = dispatch_queue_create("com.beaconscan.processsdownload", nil)
+        
+        dispatch_async(downloadQueue) {
+            
+            let data = NSData(contentsOfURL: NSURL(string: retailer.thumbnail)!)
+            
+            var image : UIImage?
+            if data != nil {
+                retailer.thumbnailData = data
+                image = UIImage(data: data!)!
+            }
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                imageView.image = image
+            }
+        }
+    }
+
+    
     class func getStringFromJSON(data: NSDictionary, key: String) -> String{
         
         //let info : AnyObject? = data[key]

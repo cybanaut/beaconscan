@@ -8,11 +8,19 @@
 
 import UIKit
 
-class SettingViewController: UIViewController {
+class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var ageGroupPicker: UIPickerView!
+    
+    let ageGroup = ["","Under 20","20-29","30-39","40-49","50-59","60+"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ageGroupPicker.dataSource = self
+        ageGroupPicker.delegate = self
+        
+        
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
@@ -26,14 +34,17 @@ class SettingViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
     }
-    */
-
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return ageGroup.count
+    }
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return ageGroup[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print(row)
+    }
 }

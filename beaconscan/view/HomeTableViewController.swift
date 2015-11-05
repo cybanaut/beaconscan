@@ -91,7 +91,7 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MetaCell") as! MetaCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("RetailerCell") as! RetailerCell
         
         /*let info = viewLinks[indexPath.row]
         cell.titleLabel.text = info.title
@@ -105,11 +105,13 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         let info = retailers[indexPath.row]
         cell.titleLabel.text = info.name
         cell.subtitleLabel.text = info.short_description
-        let url = NSURL(string: info.cover_photo!)
+        /*
+        let url = NSURL(string: "http://beacon.infusecreativeinc.com/int/1/tn/")
         let data = NSData(contentsOfURL: url!)
         if data != nil {
             cell.logo.image = UIImage(data:data!)
-        }
+        }*/
+        Utils.asyncLoadRetailerThumbnail(info, imageView: cell.logo)
         
         
         return cell;
