@@ -10,6 +10,7 @@ import UIKit
 
 class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var ageGroupPicker: UIPickerView!
     @IBOutlet weak var demoModeLabel: UILabel!

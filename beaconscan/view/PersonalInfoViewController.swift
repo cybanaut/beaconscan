@@ -9,7 +9,6 @@
 import UIKit
 
 class PersonalInfoViewController: UIViewController {
-
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {

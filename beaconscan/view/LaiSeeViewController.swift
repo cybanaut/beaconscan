@@ -10,6 +10,7 @@ import UIKit
 
 class LaiSeeViewController: UIViewController {
 
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()

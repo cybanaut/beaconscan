@@ -90,6 +90,7 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         return retailers.count
     }
     
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("RetailerCell") as! RetailerCell
         
