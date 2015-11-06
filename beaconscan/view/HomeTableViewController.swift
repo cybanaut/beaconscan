@@ -16,10 +16,6 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     let locationManager = CLLocationManager()
     let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "F94DBB23-2266-7822-3782-57BEAC0952AC")!, identifier: "Beaconstac")
-    let colours = [
-        2: UIColor(red: 84/255, green: 77/255, blue: 160/255, alpha: 1),
-        49375: UIColor(red: 255/255, green: 0/255, blue: 0/255, alpha: 1)
-    ]
     
     var retailers : [Retailer]!
     var api : InfuseAPI!
@@ -128,7 +124,7 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         let knownBeacons = beacons.filter{ $0.proximity != CLProximity.Unknown }
         if (knownBeacons.count > 0) {
             let closestBeacon = knownBeacons[0] as CLBeacon
-            self.view.backgroundColor = self.colours[closestBeacon.minor.integerValue]
+//            self.view.backgroundColor = self.colours[closestBeacon.minor.integerValue]
             //            print(closestBeacon);
             print(closestBeacon.proximityUUID.UUIDString);
             print(closestBeacon.major);
