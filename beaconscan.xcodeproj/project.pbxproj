@@ -215,7 +215,8 @@
 				FB94B1441BE8319500D3E5DC /* PersonalInfoViewController.swift */,
 			);
 			name = view;
-			sourceTree = "<group>";
+			path = beaconscan;
+			sourceTree = SOURCE_ROOT;
 		};
 		FB94B16E1BE9198700D3E5DC /* Cells */ = {
 			isa = PBXGroup;
@@ -385,7 +386,7 @@
 				TargetAttributes = {
 					4976B7D91BE5887A009E794E = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 34JL6X48Z9;
+						DevelopmentTeam = KZTU89HESF;
 					};
 					4976B7F01BE5887A009E794E = {
 						CreatedOnToolsVersion = 7.1;
@@ -653,7 +654,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = beaconscan/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.beaconscan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.bosco;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "beaconscan/beaconscan-Bridging-Header.h";
@@ -670,7 +671,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = beaconscan/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.beaconscan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.bosco;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "beaconscan/beaconscan-Bridging-Header.h";
