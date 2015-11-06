@@ -23,3 +23,4 @@ class RetailerCell: UITableViewCell {
         subtitleLabel.textColor = UIColor(white: 0.6, alpha: 1.0)
     }
 }
+
