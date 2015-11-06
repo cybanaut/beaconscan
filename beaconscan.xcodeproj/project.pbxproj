@@ -173,7 +173,7 @@
 				4976B7E41BE5887A009E794E /* beaconscan.xcdatamodeld */,
 			);
 			path = beaconscan;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		4976B7F41BE5887A009E794E /* beaconscanTests */ = {
 			isa = PBXGroup;
@@ -215,7 +215,8 @@
 				FB94B1441BE8319500D3E5DC /* PersonalInfoViewController.swift */,
 			);
 			name = view;
-			sourceTree = "<group>";
+			path = beaconscan;
+			sourceTree = SOURCE_ROOT;
 		};
 		FB94B16E1BE9198700D3E5DC /* Cells */ = {
 			isa = PBXGroup;
