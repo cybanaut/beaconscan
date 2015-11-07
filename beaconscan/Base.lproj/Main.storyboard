@@ -134,6 +134,9 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <color key="backgroundColor" red="0.94085192679999996" green="0.94903725390000004" blue="0.95307987930000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="5DS-aU-ZKZ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="97P-CL-L2U"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3BG-Dp-WFY">
                                         <rect key="frame" x="0.0" y="88" width="375" height="44"/>
@@ -1294,14 +1297,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HomePage.png" translatesAutoresizingMaskIntoConstraints="NO" id="PNA-v5-Crj">
-                                <rect key="frame" x="0.0" y="-11" width="375" height="678"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmB-Tu-atk" userLabel="laiSee">
+                                <rect key="frame" x="20" y="129" width="67" height="30"/>
+                                <state key="normal" title="tap me">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pYq-hv-OFa" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="RWy-gj-fG4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAP-TJ-fhA" userLabel="promo">
+                                <rect key="frame" x="156" y="273" width="63" height="30"/>
+                                <state key="normal" title="tap me">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="A1F-kY-ZGs" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="WDd-2Q-07J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="U37-4F-dcB">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="wms-bh-4e7"/>
+                        <barButtonItem key="rightBarButtonItem" title="Start" id="OzX-PH-bYE"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1373,9 +1392,13 @@
     </scenes>
     <resources>
         <image name="CNY-Master-Background.png" width="1080" height="1920"/>
-        <image name="HomePage.png" width="1080" height="1920"/>
         <image name="WelcomePage.png" width="1080" height="1920"/>
         <image name="menu" width="22" height="22"/>
         <image name="news" width="33" height="33"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Rmo-2x-hrS"/>
+        <segue reference="RWy-gj-fG4"/>
+        <segue reference="WDd-2Q-07J"/>
+    </inferredMetricsTieBreakers>
 </document>
