@@ -1,3 +1,183 @@
 
+/* Class = "UILabel"; text = "Street Address *"; ObjectID = "0a7-oz-C32"; */
+"0a7-oz-C32.text" = "Street Address *";
+
+/* Class = "UITextField"; placeholder = "First Name"; ObjectID = "2pE-k4-Zfs"; */
+"2pE-k4-Zfs.placeholder" = "First Name";
+
+/* Class = "UILabel"; text = "Email *"; ObjectID = "3aL-at-Udq"; */
+"3aL-at-Udq.text" = "Email *";
+
+/* Class = "UILabel"; text = "Last Name *"; ObjectID = "4FB-A5-Igh"; */
+"4FB-A5-Igh.text" = "Last Name *";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "4zN-3k-eB5"; */
+"4zN-3k-eB5.placeholder" = "City";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "5Yb-Up-acc"; */
+"5Yb-Up-acc.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6DD-Jm-rLZ"; */
+"6DD-Jm-rLZ.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Open"; ObjectID = "9Ev-Mk-Kzc"; */
+"9Ev-Mk-Kzc.normalTitle" = "Open";
+
+/* Class = "UITextField"; placeholder = "Country"; ObjectID = "A4S-ea-FQy"; */
+"A4S-ea-FQy.placeholder" = "Country";
+
+/* Class = "UIViewController"; title = "Setting"; ObjectID = "Axr-95-dRK"; */
+"Axr-95-dRK.title" = "Setting";
+
+/* Class = "UILabel"; text = "Age Group"; ObjectID = "DNQ-dr-dH7"; */
+"DNQ-dr-dH7.text" = "Age Group";
+
+/* Class = "UILabel"; text = "Demo Mode"; ObjectID = "GLI-58-Llw"; */
+"GLI-58-Llw.text" = "Demo Mode";
+
 /* Class = "UILabel"; text = "Welcome"; ObjectID = "HCf-Wi-ym1"; */
-"HCf-Wi-ym1.text" = "欢迎你来到 Oakridge Centre";
+"HCf-Wi-ym1.text" = "Welcome";
+
+/* Class = "UITableViewController"; title = "Lai See"; ObjectID = "Hre-44-ZIG"; */
+"Hre-44-ZIG.title" = "Lai See";
+
+/* Class = "UILabel"; text = "Lai See"; ObjectID = "I1N-xM-Pad"; */
+"I1N-xM-Pad.text" = "Lai See";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "IlG-FY-L1t"; */
+"IlG-FY-L1t.text" = "Gender";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LZx-ni-Guh"; */
+"LZx-ni-Guh.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Pronvince/State"; ObjectID = "Lte-pw-uWJ"; */
+"Lte-pw-uWJ.placeholder" = "Pronvince/State";
+
+/* Class = "UILabel"; text = "Personal Info"; ObjectID = "P6C-q7-rgD"; */
+"P6C-q7-rgD.text" = "Personal Info";
+
+/* Class = "UILabel"; text = "Phone Number *"; ObjectID = "PIV-as-qoi"; */
+"PIV-as-qoi.text" = "Phone Number *";
+
+/* Class = "UILabel"; text = "Lai See"; ObjectID = "R2u-ea-lu4"; */
+"R2u-ea-lu4.text" = "Lai See";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RRB-JD-GI6"; */
+"RRB-JD-GI6.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "RjJ-eE-0Ro"; */
+"RjJ-eE-0Ro.text" = "Label";
+
+/* Class = "UILabel"; text = "City *"; ObjectID = "SLb-JC-yca"; */
+"SLb-JC-yca.text" = "City *";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "T7O-1m-Dcm"; */
+"T7O-1m-Dcm.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Postcode/Zip"; ObjectID = "UCl-4r-uKk"; */
+"UCl-4r-uKk.placeholder" = "Postcode/Zip";
+
+/* Class = "UIViewController"; title = "LaiSeePocketCover"; ObjectID = "VF6-IS-SVe"; */
+"VF6-IS-SVe.title" = "LaiSeePocketCover";
+
+/* Class = "UIButton"; normalTitle = "Open"; ObjectID = "XrX-zB-9LD"; */
+"XrX-zB-9LD.normalTitle" = "Open";
+
+/* Class = "UINavigationItem"; title = "Promo"; ObjectID = "ZdL-1E-MRn"; */
+"ZdL-1E-MRn.title" = "Promo";
+
+/* Class = "UIViewController"; title = "Personal Info"; ObjectID = "bGZ-bu-ug7"; */
+"bGZ-bu-ug7.title" = "Personal Info";
+
+/* Class = "UILabel"; text = "OakRidge Centre"; ObjectID = "bHl-OM-PRm"; */
+"bHl-OM-PRm.text" = "OakRidge Centre";
+
+/* Class = "UILabel"; text = "First Name *"; ObjectID = "btp-vo-t5g"; */
+"btp-vo-t5g.text" = "First Name *";
+
+/* Class = "UISegmentedControl"; dfP-Yn-QUO.segmentTitles[0] = "Male"; ObjectID = "dfP-Yn-QUO"; */
+"dfP-Yn-QUO.segmentTitles[0]" = "Male";
+
+/* Class = "UISegmentedControl"; dfP-Yn-QUO.segmentTitles[1] = "Femail"; ObjectID = "dfP-Yn-QUO"; */
+"dfP-Yn-QUO.segmentTitles[1]" = "Femail";
+
+/* Class = "UISegmentedControl"; dfP-Yn-QUO.segmentTitles[2] = "Not Disclosed"; ObjectID = "dfP-Yn-QUO"; */
+"dfP-Yn-QUO.segmentTitles[2]" = "Not Disclosed";
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "eEv-J4-EJF"; */
+"eEv-J4-EJF.placeholder" = "Last Name";
+
+/* Class = "UILabel"; text = "timestamp"; ObjectID = "eWA-Qr-ecM"; */
+"eWA-Qr-ecM.text" = "timestamp";
+
+/* Class = "UILabel"; text = "Country *"; ObjectID = "eiw-00-97t"; */
+"eiw-00-97t.text" = "Country *";
+
+/* Class = "UILabel"; text = "Lai See / Special Offers"; ObjectID = "fEO-bA-qw9"; */
+"fEO-bA-qw9.text" = "Lai See / Special Offers";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hIk-Gc-AyD"; */
+"hIk-Gc-AyD.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "hIt-uX-CBy"; */
+"hIt-uX-CBy.text" = "Label";
+
+/* Class = "UILabel"; text = "Postcode/Zip"; ObjectID = "hJP-kJ-aI5"; */
+"hJP-kJ-aI5.text" = "Postcode/Zip";
+
+/* Class = "UITextField"; placeholder = "Phone Number"; ObjectID = "hXu-Om-2HN"; */
+"hXu-Om-2HN.placeholder" = "Phone Number";
+
+/* Class = "UINavigationItem"; title = "Lai See Pocket"; ObjectID = "hY5-uF-fO4"; */
+"hY5-uF-fO4.title" = "Lai See Pocket";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iPJ-2o-eAE"; */
+"iPJ-2o-eAE.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jAa-Yl-Boi"; */
+"jAa-Yl-Boi.text" = "Label";
+
+/* Class = "UILabel"; text = "Province/State *"; ObjectID = "jjF-1P-FYA"; */
+"jjF-1P-FYA.text" = "Province/State *";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "keY-Nn-3OD"; */
+"keY-Nn-3OD.text" = "Label";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "lVl-oZ-lwY"; */
+"lVl-oZ-lwY.text" = "Home";
+
+/* Class = "UILabel"; text = "Setting"; ObjectID = "mR1-Ra-6Ya"; */
+"mR1-Ra-6Ya.text" = "Setting";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nZj-eD-UOH"; */
+"nZj-eD-UOH.text" = "Label";
+
+/* Class = "UILabel"; text = "timestamp"; ObjectID = "pF1-Yp-NVi"; */
+"pF1-Yp-NVi.text" = "timestamp";
+
+/* Class = "UILabel"; text = "timestamp"; ObjectID = "pG1-vC-smd"; */
+"pG1-vC-smd.text" = "timestamp";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qyr-AY-AQc"; */
+"qyr-AY-AQc.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "u4w-de-XrC"; */
+"u4w-de-XrC.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "vbo-2M-Cif"; */
+"vbo-2M-Cif.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "veO-pC-1zp"; */
+"veO-pC-1zp.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wwn-K5-SYq"; */
+"wwn-K5-SYq.text" = "Label";
+
+/* Class = "UITableViewController"; title = "SideMenu"; ObjectID = "xPb-xf-u11"; */
+"xPb-xf-u11.title" = "SideMenu";
+
+/* Class = "UINavigationItem"; title = "Personal Info"; ObjectID = "y4m-XN-9as"; */
+"y4m-XN-9as.title" = "Personal Info";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zXQ-dE-4IF"; */
+"zXQ-dE-4IF.text" = "Label";

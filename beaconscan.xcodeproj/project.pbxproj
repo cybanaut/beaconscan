@@ -66,11 +66,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		491703D51BEE319C00348C30 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		491703D71BEE31AE00348C30 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		4917F2F01BE5E32E0054A646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4917F2F31BE5E33A0054A646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4917F2F61BE5E3600054A646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
-		495092EF1BE68E650054DBA6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
-		495092F11BE68E670054DBA6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		496314901BED63D00021B51B /* WelcomePage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WelcomePage.png; sourceTree = "<group>"; };
 		496314921BED66940021B51B /* CNY-Master-Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CNY-Master-Background.png"; sourceTree = "<group>"; };
 		496314941BED6C080021B51B /* HomePage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomePage.png; sourceTree = "<group>"; };
@@ -546,8 +546,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				4917F2F01BE5E32E0054A646 /* Base */,
-				495092EF1BE68E650054DBA6 /* zh-Hant */,
-				495092F11BE68E670054DBA6 /* zh-Hans */,
+				491703D51BEE319C00348C30 /* zh-Hant */,
+				491703D71BEE31AE00348C30 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
