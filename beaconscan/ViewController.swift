@@ -16,6 +16,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.addBackground("WelcomePage.png")
+        
         // Do any additional setup after loading the view, typically from a nib.
         locationManager.delegate=self;
         if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.AuthorizedWhenInUse) {

@@ -45,6 +45,7 @@
 		FB94B19C1BEA310F00D3E5DC /* InfuseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B19B1BEA310F00D3E5DC /* InfuseAPI.swift */; };
 		FB94B1A11BEA424600D3E5DC /* Retailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1A01BEA424600D3E5DC /* Retailer.swift */; };
 		FB97981B1BEB7FB8000C1FB2 /* RetailerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97981A1BEB7FB8000C1FB2 /* RetailerCell.swift */; };
+		FBBBF4741BEDABE6005AD0B1 /* addImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBBF4731BEDABE6005AD0B1 /* addImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		FB94B19B1BEA310F00D3E5DC /* InfuseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfuseAPI.swift; path = InfuseAPI/InfuseAPI.swift; sourceTree = "<group>"; };
 		FB94B1A01BEA424600D3E5DC /* Retailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Retailer.swift; path = Utils/Retailer.swift; sourceTree = "<group>"; };
 		FB97981A1BEB7FB8000C1FB2 /* RetailerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetailerCell.swift; sourceTree = "<group>"; };
+		FBBBF4731BEDABE6005AD0B1 /* addImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = addImage.swift; path = Utils/addImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				FB94B1971BE9AD1C00D3E5DC /* utils.swift */,
+				FBBBF4731BEDABE6005AD0B1 /* addImage.swift */,
 			);
 			name = Utils;
 			path = beaconscan;
@@ -404,7 +407,7 @@
 				TargetAttributes = {
 					4976B7D91BE5887A009E794E = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = KZTU89HESF;
+						DevelopmentTeam = 34JL6X48Z9;
 					};
 					4976B7F01BE5887A009E794E = {
 						CreatedOnToolsVersion = 7.1;
@@ -485,6 +488,7 @@
 				FB94B1431BE8310600D3E5DC /* LaiSeeTableViewController.swift in Sources */,
 				FB94B18D1BE9198700D3E5DC /* TrackCell.swift in Sources */,
 				FB2BA9091BE7AC9500CC110B /* SWRevealViewController.m in Sources */,
+				FBBBF4741BEDABE6005AD0B1 /* addImage.swift in Sources */,
 				FB2BA90C1BE7B88100CC110B /* HomeTableViewController.swift in Sources */,
 				FB94B1871BE9198700D3E5DC /* CartCell.swift in Sources */,
 				FB94B1451BE8319500D3E5DC /* PersonalInfoViewController.swift in Sources */,
