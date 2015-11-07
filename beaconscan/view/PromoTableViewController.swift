@@ -1,21 +1,17 @@
 //
-//  HomeTableViewController.swift
+//  PromoTableViewController.swift
 //  beaconscan
 //
-//  Created by waynehui on 3/11/15.
+//  Created by waynehui on 8/11/15.
 //  Copyright © 2015年 Kim Mo. All rights reserved.
 //
 
 import UIKit
-import CoreLocation
 
-class HomeTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
+class PromoTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView : UITableView!
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    
-    let locationManager = CLLocationManager()
-    let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "F94DBB23-2266-7822-3782-57BEAC0952AC")!, identifier: "Beaconstac")
     
     var retailers : [Retailer]!
     var api : InfuseAPI!
@@ -39,27 +35,12 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         
         getRetailers()
         
-        let rightItem = UIActivityIndicatorView( activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
-        rightItem.startAnimating()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightItem)
-        
-        navigationController?.navigationBar.barTintColor = UIColor.redColor()
-        
         // to make side menu work
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        
-        //to make beacon scanning work
-        locationManager.delegate=self;
-        if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.AuthorizedWhenInUse) {
-            locationManager.requestWhenInUseAuthorization()
-            
-        }
-        locationManager.startRangingBeaconsInRegion(region)
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,7 +63,7 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       // return viewLinks.count;
+        // return viewLinks.count;
         return retailers.count
     }
     
@@ -96,7 +77,7 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         let url = NSURL(string: info.image!)
         let data = NSData(contentsOfURL: url!)
         if data != nil {
-            cell.logo.image = UIImage(data:data!)
+        cell.logo.image = UIImage(data:data!)
         }*/
         
         let info = retailers[indexPath.row]
@@ -106,7 +87,7 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         let url = NSURL(string: "http://beacon.infusecreativeinc.com/int/1/tn/")
         let data = NSData(contentsOfURL: url!)
         if data != nil {
-            cell.logo.image = UIImage(data:data!)
+        cell.logo.image = UIImage(data:data!)
         }*/
         Utils.asyncLoadRetailerThumbnail(info, imageView: cell.logo)
         
@@ -120,20 +101,4 @@ class HomeTableViewController: UIViewController, UITableViewDelegate, UITableVie
         //self .performSegueWithIdentifier("retailerPage", sender: self)
     }
     
-    func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
-        let knownBeacons = beacons.filter{ $0.proximity != CLProximity.Unknown }
-        if (knownBeacons.count > 0) {
-            let closestBeacon = knownBeacons[0] as CLBeacon
-//            self.view.backgroundColor = self.colours[closestBeacon.minor.integerValue]
-            //            print(closestBeacon);
-            print(closestBeacon.proximityUUID.UUIDString);
-            print(closestBeacon.major);
-            print(closestBeacon.minor);
-            print(closestBeacon.rssi);
-            //           print(region);
-            //           print(region.proximityUUID);
-            //           print(region.identifier);
-        }
-    }
-
 }

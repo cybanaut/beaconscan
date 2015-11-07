@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController {
 
     let locationManager = CLLocationManager()
     let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "F94DBB23-2266-7822-3782-57BEAC0952AC")!, identifier: "Beaconstac")
@@ -20,12 +20,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.view.addBackground("WelcomePage.png")
         
         // Do any additional setup after loading the view, typically from a nib.
+        /*
         locationManager.delegate=self;
         if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.AuthorizedWhenInUse) {
             locationManager.requestWhenInUseAuthorization()
   
         }
         locationManager.startRangingBeaconsInRegion(region)
+*/
     }
 
     override func didReceiveMemoryWarning() {

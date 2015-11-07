@@ -20,7 +20,6 @@
 		4976B7F61BE5887A009E794E /* beaconscanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4976B7F51BE5887A009E794E /* beaconscanTests.swift */; };
 		4976B8011BE5887A009E794E /* beaconscanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4976B8001BE5887A009E794E /* beaconscanUITests.swift */; };
 		FB2BA9091BE7AC9500CC110B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2BA9081BE7AC9500CC110B /* SWRevealViewController.m */; };
-		FB2BA90C1BE7B88100CC110B /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2BA90B1BE7B88100CC110B /* HomeTableViewController.swift */; };
 		FB2BA90E1BE7C14500CC110B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2BA90D1BE7C14500CC110B /* SettingViewController.swift */; };
 		FB2BA9101BE7C2C700CC110B /* LaiSeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2BA90F1BE7C2C700CC110B /* LaiSeeViewController.swift */; };
 		FB94B1431BE8310600D3E5DC /* LaiSeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1421BE8310600D3E5DC /* LaiSeeTableViewController.swift */; };
@@ -46,6 +45,9 @@
 		FB94B1A11BEA424600D3E5DC /* Retailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1A01BEA424600D3E5DC /* Retailer.swift */; };
 		FB97981B1BEB7FB8000C1FB2 /* RetailerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97981A1BEB7FB8000C1FB2 /* RetailerCell.swift */; };
 		FBBBF4741BEDABE6005AD0B1 /* addImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBBF4731BEDABE6005AD0B1 /* addImage.swift */; };
+		FBBBF4761BEE4975005AD0B1 /* PromoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBBF4751BEE4975005AD0B1 /* PromoTableViewController.swift */; };
+		FBDB414E1BEE560300F1B88C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB414D1BEE560300F1B88C /* HomeViewController.swift */; };
+		FBDB41501BEE576500F1B88C /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB414F1BEE576500F1B88C /* HomePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +92,6 @@
 		FB2BA9061BE7AC9400CC110B /* beaconscan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "beaconscan-Bridging-Header.h"; sourceTree = "<group>"; };
 		FB2BA9071BE7AC9500CC110B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		FB2BA9081BE7AC9500CC110B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		FB2BA90B1BE7B88100CC110B /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewController.swift; path = beaconscan/view/HomeTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		FB2BA90D1BE7C14500CC110B /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = beaconscan/view/SettingViewController.swift; sourceTree = SOURCE_ROOT; };
 		FB2BA90F1BE7C2C700CC110B /* LaiSeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaiSeeViewController.swift; path = beaconscan/view/LaiSeeViewController.swift; sourceTree = SOURCE_ROOT; };
 		FB94B1421BE8310600D3E5DC /* LaiSeeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaiSeeTableViewController.swift; path = beaconscan/view/LaiSeeTableViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -116,6 +117,9 @@
 		FB94B1A01BEA424600D3E5DC /* Retailer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Retailer.swift; path = Utils/Retailer.swift; sourceTree = "<group>"; };
 		FB97981A1BEB7FB8000C1FB2 /* RetailerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetailerCell.swift; sourceTree = "<group>"; };
 		FBBBF4731BEDABE6005AD0B1 /* addImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = addImage.swift; path = Utils/addImage.swift; sourceTree = "<group>"; };
+		FBBBF4751BEE4975005AD0B1 /* PromoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromoTableViewController.swift; path = view/PromoTableViewController.swift; sourceTree = "<group>"; };
+		FBDB414D1BEE560300F1B88C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = view/HomeViewController.swift; sourceTree = "<group>"; };
+		FBDB414F1BEE576500F1B88C /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageViewController.swift; path = view/HomePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,11 +232,13 @@
 		FB2BA90A1BE7B85F00CC110B /* view */ = {
 			isa = PBXGroup;
 			children = (
-				FB2BA90B1BE7B88100CC110B /* HomeTableViewController.swift */,
 				FB2BA90D1BE7C14500CC110B /* SettingViewController.swift */,
 				FB2BA90F1BE7C2C700CC110B /* LaiSeeViewController.swift */,
 				FB94B1421BE8310600D3E5DC /* LaiSeeTableViewController.swift */,
 				FB94B1441BE8319500D3E5DC /* PersonalInfoViewController.swift */,
+				FBBBF4751BEE4975005AD0B1 /* PromoTableViewController.swift */,
+				FBDB414D1BEE560300F1B88C /* HomeViewController.swift */,
+				FBDB414F1BEE576500F1B88C /* HomePageViewController.swift */,
 			);
 			name = view;
 			path = beaconscan;
@@ -489,13 +495,13 @@
 				FB94B18D1BE9198700D3E5DC /* TrackCell.swift in Sources */,
 				FB2BA9091BE7AC9500CC110B /* SWRevealViewController.m in Sources */,
 				FBBBF4741BEDABE6005AD0B1 /* addImage.swift in Sources */,
-				FB2BA90C1BE7B88100CC110B /* HomeTableViewController.swift in Sources */,
 				FB94B1871BE9198700D3E5DC /* CartCell.swift in Sources */,
 				FB94B1451BE8319500D3E5DC /* PersonalInfoViewController.swift in Sources */,
 				FB94B1861BE9198700D3E5DC /* EventCell.swift in Sources */,
 				FB94B18E1BE9198700D3E5DC /* MetaCell.swift in Sources */,
 				FB97981B1BEB7FB8000C1FB2 /* RetailerCell.swift in Sources */,
 				FB94B1911BE9198700D3E5DC /* NavigationTableCell.swift in Sources */,
+				FBBBF4761BEE4975005AD0B1 /* PromoTableViewController.swift in Sources */,
 				FB94B18F1BE9198700D3E5DC /* NavigationFullCell.swift in Sources */,
 				FB94B1951BE9198700D3E5DC /* MegaTheme.swift in Sources */,
 				FB94B1901BE9198700D3E5DC /* NavigationSideCell.swift in Sources */,
@@ -503,7 +509,9 @@
 				FB94B1A11BEA424600D3E5DC /* Retailer.swift in Sources */,
 				FB94B1891BE9198700D3E5DC /* ProductCell.swift in Sources */,
 				FB94B18B1BE9198700D3E5DC /* AlbumCell.swift in Sources */,
+				FBDB414E1BEE560300F1B88C /* HomeViewController.swift in Sources */,
 				FB94B18A1BE9198700D3E5DC /* ProductImageCell.swift in Sources */,
+				FBDB41501BEE576500F1B88C /* HomePageViewController.swift in Sources */,
 				FB2BA90E1BE7C14500CC110B /* SettingViewController.swift in Sources */,
 				FB94B1931BE9198700D3E5DC /* ConnectionCell.swift in Sources */,
 				FB94B18C1BE9198700D3E5DC /* PhotoCell.swift in Sources */,
@@ -679,7 +687,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = beaconscan/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.bosco;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.wayne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "beaconscan/beaconscan-Bridging-Header.h";
@@ -696,7 +704,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = beaconscan/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.bosco;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.wayne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "beaconscan/beaconscan-Bridging-Header.h";
