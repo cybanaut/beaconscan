@@ -17,6 +17,8 @@ class PromoTableViewController: UIViewController, UITableViewDelegate, UITableVi
     var api : InfuseAPI!
     
     //var viewLinks : [ViewInfo]!
+    var preferredLanguages : NSLocale!
+    var pre = NSLocale.preferredLanguages()[0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +60,7 @@ class PromoTableViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func getRetailers(){
-        api.getRetailer("", language: "", completion: didGetRetails)
+        api.getRetailer("", language: pre, completion: didGetRetails)
         
     }
     

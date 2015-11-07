@@ -19,7 +19,9 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var genderSegment: UISegmentedControl!
     
     let ageGroup = ["","Under 20","20-29","30-39","40-49","50-59","60+"]
-    //var pageSetting = [NSManagedObject]()
+    var pageSetting = [NSManagedObject]()
+    
+    //let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,16 +36,16 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        
+        /*
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let entity = NSEntityDescription.entityForName("Setting", inManagedObjectContext: managedContext)
         let mySetting = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
         mySetting.setValue(1, forKey:"mode")
         mySetting.setValue(1, forKey:"gender")
-
+*/
         
-        //saveData("more", value: 1)
+        //saveData("mode", value: 1)
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,15 +53,37 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func showButtonTapped(sender: AnyObject) {
+        showData()
+    }
+    
+    func showData() {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        //2
+        let fetchRequest = NSFetchRequest(entityName: "Setting")
+        
+        //3
+        do {
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            pageSetting = results as! [NSManagedObject]
+            print(pageSetting)
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+    }
+    
     func stateChanged(switchState: UISwitch) {
         if switchState.on {
             print("Special Offer Mode")
             demoModeLabel.text = "Demo Mode: Special Offer"
-            //saveData("mode", value: 0)
+            saveData("mode", insertValue: 0)
         } else {
             print("Lai See Mode")
             demoModeLabel.text = "Demo Mode: Lai See"
-            //saveData("mode", value: 1)
+            saveData("mode", insertValue: 1)
         }
     }
     
@@ -68,13 +92,13 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         {
         case 0:
             print("Male")
-            //saveData("gender", value: 0)
+            saveData("gender", insertValue: 0)
         case 1:
             print("Female")
-            //saveData("gender", value: 1)
+            saveData("gender", insertValue : 1)
         case 2:
             print("Not Disclosed")
-            //saveData("gender", value: 2)
+            saveData("gender", insertValue : 2)
         default:
             break; 
         }
@@ -92,10 +116,10 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print(row)
-        saveData("ageGroup", value: row)
+        saveData("ageGroup", insertValue: row)
     }
     
-    func saveData(key: String, value:Int) {
+    func saveData(keyName: String, insertValue:Int) {
         //1
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
@@ -106,17 +130,16 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         let setting = NSManagedObject(entity: entity!,insertIntoManagedObjectContext: managedContext)
         
         //3
-        setting.setValue(value, forKey: key)
-        
+        setting.setValue(insertValue, forKey:keyName )
         
         //4
         do {
             try managedContext.save()
-            //pageSetting.insert(setting, atIndex: 1)
+            pageSetting.append(setting)
             //5
             //pageSetting = setting
         } catch let error as NSError  {
             print("Could not save \(error), \(error.userInfo)")
         }
     }
-}
+    }

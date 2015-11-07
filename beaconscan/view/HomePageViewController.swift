@@ -17,6 +17,10 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
     let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "F94DBB23-2266-7822-3782-57BEAC0952AC")!, identifier: "Beaconstac")
     let spinner = UIActivityIndicatorView( activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
     
+    var api : InfuseAPI!
+    var preferredLanguages : NSLocale!
+    var language = NSLocale.preferredLanguages()[0]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,13 +37,8 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        locationManager.delegate=self;
-        if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.AuthorizedWhenInUse) {
-            locationManager.requestWhenInUseAuthorization()
-            
-        }
-        locationManager.startRangingBeaconsInRegion(region)
-
+        self.api = InfuseAPI()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +48,13 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
     
     func switchTapped(){
         spinner.startAnimating()
+        locationManager.delegate=self;
+        if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.AuthorizedWhenInUse) {
+            locationManager.requestWhenInUseAuthorization()
+            
+        }
+        locationManager.startRangingBeaconsInRegion(region)
+
     }
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
@@ -66,6 +72,21 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             //           print(region.identifier);
         }
     }
+    
+    
+    @IBAction func getLaiSee(sender: AnyObject) {
+        let beaconParm = ["uuid":"F94DBB23-2266-7822-3782-57BEAC0952AC", "major":"1", "minor":"1"]
+        let body: NSMutableDictionary = NSMutableDictionary()
+        
+        body.setValue(beaconParm, forKey: "beacon")
+        body.setValue(language, forKey: "language")
+       
+        //api.getLaiSee(body)
+        
+        //performSegueWithIdentifier("LaiSeeView", sender: self)
+        
+    }
+    
     
 
     /*

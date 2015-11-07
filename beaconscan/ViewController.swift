@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     let locationManager = CLLocationManager()
     let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "F94DBB23-2266-7822-3782-57BEAC0952AC")!, identifier: "Beaconstac")
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
