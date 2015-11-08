@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class InfuseAPI {
     
@@ -69,7 +70,8 @@ class InfuseAPI {
         case ConversionFailed = "ERROR: conversion from JSON failed"
     }
 
-    func getLaiSee(params : NSMutableDictionary) {
+   // func getLaiSee(params : NSMutableDictionary, completion: ((returnData : NSDictionary) -> Void)!) {
+func getLaiSee(params : NSMutableDictionary, completion: (([LaiSeeData]) -> Void)!) {
         let request = NSMutableURLRequest(URL: NSURL(string: serverUrl+"getLaiSee.php")!)
         let session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
@@ -109,16 +111,43 @@ class InfuseAPI {
             
             // The JSONObjectWithData constructor didn't return an error. But, we should still
             // check and make sure that json has a value using optional binding.
+            var LaiSeePocket = [LaiSeeData]()
             if let parseJSON = json {
                 // Okay, the parsedJSON is here, let's print all its contents
                 print("return_data: \(parseJSON)")
+                let return_data = LaiSeeData(data: parseJSON )
+                LaiSeePocket.append(return_data)
+                
+                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                let managedContext = appDelegate.managedObjectContext
+                
+                //2
+                let entity =  NSEntityDescription.entityForName("LaiSee",inManagedObjectContext:managedContext)
+                
+                let LaiSee = NSManagedObject(entity: entity!,insertIntoManagedObjectContext: managedContext)
+                
+                //3
+                LaiSee.setValue(parseJSON["id"], forKey:"id" )
+                LaiSee.setValue(parseJSON["body"], forKey:"body" )
+                LaiSee.setValue(parseJSON["title"], forKey:"title" )
+                LaiSee.setValue(parseJSON["qr_code"], forKey:"qr_code" )
+                LaiSee.setValue(parseJSON["type"], forKey:"type" )
+
+
+                //4
+                do {
+                    try managedContext.save()
+                    completion(LaiSeePocket)
+                } catch let error as NSError  {
+                    print("Could not save \(error), \(error.userInfo)")
+                }
+
             }
             else {
                 // Woa, okay the json object was nil, something went worng. Maybe the server isn't running?
                 let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
                 print("Error could not parse JSON: \(jsonStr)")
             }
-            
         })
         
         task.resume()

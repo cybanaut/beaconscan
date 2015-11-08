@@ -11,11 +11,18 @@ import UIKit
 class LaiSeePocketViewController: UIViewController {
 
     @IBOutlet weak var OpenButton: UIButton!
+    @IBOutlet weak var LaiSeePocketTitle: UILabel!
+    @IBOutlet weak var LaiSeePocketBody: UILabel!
+    
+    var LaiSeePocketData : LaiSeeData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.addBackground("CNY-Master-Background.png")
-        // Do any additional setup after loading the view.
+        LaiSeePocketTitle.text = LaiSeePocketData.title
+        LaiSeePocketBody.text = LaiSeePocketData.body
+        print(LaiSeePocketData)
+        
+        
     }
 
     @IBAction func OpenButtonTapped(sender: AnyObject) {

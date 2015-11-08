@@ -17,7 +17,10 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
     let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "F94DBB23-2266-7822-3782-57BEAC0952AC")!, identifier: "Beaconstac")
     let spinner = UIActivityIndicatorView( activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
     
+    var laiSee = [LaiSeeData]!()
     var api : InfuseAPI!
+    var LaiSeePocketData : NSDictionary!
+    
     var preferredLanguages : NSLocale!
     var language = NSLocale.preferredLanguages()[0]
     
@@ -38,6 +41,8 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
         }
         
         self.api = InfuseAPI()
+        self.laiSee = [LaiSeeData]()
+
         
     }
 
@@ -54,6 +59,9 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             
         }
         locationManager.startRangingBeaconsInRegion(region)
+        
+        let beaconParm = ["uuid":"F94DBB23-2266-7822-3782-57BEAC0952AC", "major":"1", "minor":"2"]
+        getLaiSee(beaconParm)
 
     }
     
@@ -68,14 +76,9 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             // print(closestBeacon.major);
             // print(closestBeacon.minor);
             // print(closestBeacon.rssi);
+            
             let beaconParm = ["uuid":closestBeacon.proximityUUID.UUIDString, "major":closestBeacon.major, "minor":closestBeacon.minor]
-            let body: NSMutableDictionary = NSMutableDictionary()
-            
-            body.setValue(beaconParm, forKey: "beacon")
-            body.setValue(language, forKey: "language")
-
-            api.getLaiSee(body)
-            
+            getLaiSee(beaconParm)
             performSegueWithIdentifier("LaiSeeView", sender: self)
             
             //           print(region);
@@ -83,32 +86,41 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             //           print(region.identifier);
         }
     }
+    @IBAction func getButtonTapped(sender: AnyObject) {
+        goNextPage()
+    }
     
-    
-    @IBAction func getLaiSee(sender: AnyObject) {
-        let beaconParm = ["uuid":"F94DBB23-2266-7822-3782-57BEAC0952AC", "major":"1", "minor":"2"]
+    func getLaiSee(parm : NSDictionary) {
         let body: NSMutableDictionary = NSMutableDictionary()
 
-        body.setValue(beaconParm, forKey: "beacon")
+        body.setValue(parm, forKey: "beacon")
         body.setValue(language, forKey: "language")
         body.setValue("greeting", forKey: "demo")
 
-        api.getLaiSee(body)
+        api.getLaiSee(body, completion: { (return_data:[LaiSeeData]) in
+            print(return_data)
+            for item in return_data {
+                self.laiSee.append(item)
+            }
+            self.goNextPage()
+        })
         
+        
+    }
+    func goNextPage() {
         performSegueWithIdentifier("LaiSeeView", sender: self)
-        
+
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "LaiSeeView"){
+            if  laiSee.count>0
+            {
+                let passLaiSee = laiSee[0]
+                let controller = segue.destinationViewController as! LaiSeePocketViewController
+                controller.LaiSeePocketData = passLaiSee
+            }
+            
+        }
     }
-    */
 
 }

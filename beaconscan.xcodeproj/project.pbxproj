@@ -10,9 +10,6 @@
 		4917F2EF1BE5E32E0054A646 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4917F2F11BE5E32E0054A646 /* Main.storyboard */; };
 		4917F2F21BE5E33A0054A646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4917F2F41BE5E33A0054A646 /* LaunchScreen.storyboard */; };
 		4917F2F51BE5E3600054A646 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4917F2F71BE5E3600054A646 /* Info.plist */; };
-		496314911BED63D00021B51B /* WelcomePage.png in Resources */ = {isa = PBXBuildFile; fileRef = 496314901BED63D00021B51B /* WelcomePage.png */; };
-		496314931BED66940021B51B /* CNY-Master-Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 496314921BED66940021B51B /* CNY-Master-Background.png */; };
-		496314951BED6C080021B51B /* HomePage.png in Resources */ = {isa = PBXBuildFile; fileRef = 496314941BED6C080021B51B /* HomePage.png */; };
 		4976B7DE1BE5887A009E794E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4976B7DD1BE5887A009E794E /* AppDelegate.swift */; };
 		4976B7E01BE5887A009E794E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4976B7DF1BE5887A009E794E /* ViewController.swift */; };
 		4976B7E61BE5887A009E794E /* beaconscan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4976B7E41BE5887A009E794E /* beaconscan.xcdatamodeld */; };
@@ -46,6 +43,13 @@
 		FB97981B1BEB7FB8000C1FB2 /* RetailerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97981A1BEB7FB8000C1FB2 /* RetailerCell.swift */; };
 		FBBBF4741BEDABE6005AD0B1 /* addImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBBF4731BEDABE6005AD0B1 /* addImage.swift */; };
 		FBBBF4761BEE4975005AD0B1 /* PromoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBBF4751BEE4975005AD0B1 /* PromoTableViewController.swift */; };
+		FBC052D51BEFA8B9006996E4 /* CNY-Lai-See-Content.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC052CE1BEFA8B9006996E4 /* CNY-Lai-See-Content.png */; };
+		FBC052D61BEFA8B9006996E4 /* CNY-Lai-See-Cover.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC052CF1BEFA8B9006996E4 /* CNY-Lai-See-Cover.png */; };
+		FBC052D71BEFA8B9006996E4 /* CNY-LaiSee-HarryRosen.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC052D01BEFA8B9006996E4 /* CNY-LaiSee-HarryRosen.png */; };
+		FBC052D81BEFA8B9006996E4 /* CNY-Master-Background.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC052D11BEFA8B9006996E4 /* CNY-Master-Background.png */; };
+		FBC052D91BEFA8B9006996E4 /* Gift-List-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC052D21BEFA8B9006996E4 /* Gift-List-Icon.png */; };
+		FBC052DA1BEFA8B9006996E4 /* HomePage.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC052D31BEFA8B9006996E4 /* HomePage.png */; };
+		FBC052DB1BEFA8B9006996E4 /* WelcomePage.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC052D41BEFA8B9006996E4 /* WelcomePage.png */; };
 		FBDB414E1BEE560300F1B88C /* HomeViewController_bak.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB414D1BEE560300F1B88C /* HomeViewController_bak.swift */; };
 		FBDB41501BEE576500F1B88C /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB414F1BEE576500F1B88C /* HomePageViewController.swift */; };
 		FBDB415A1BEE6BDB00F1B88C /* Setting+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB41581BEE6BDB00F1B88C /* Setting+CoreDataProperties.swift */; };
@@ -77,9 +81,6 @@
 		4917F2F01BE5E32E0054A646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4917F2F31BE5E33A0054A646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4917F2F61BE5E3600054A646 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
-		496314901BED63D00021B51B /* WelcomePage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WelcomePage.png; sourceTree = "<group>"; };
-		496314921BED66940021B51B /* CNY-Master-Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CNY-Master-Background.png"; sourceTree = "<group>"; };
-		496314941BED6C080021B51B /* HomePage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomePage.png; sourceTree = "<group>"; };
 		496D6BF61BE687E700DA350B /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		496D6BF71BE687E700DA350B /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		4976B7DA1BE5887A009E794E /* beaconscan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beaconscan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +123,13 @@
 		FB97981A1BEB7FB8000C1FB2 /* RetailerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetailerCell.swift; sourceTree = "<group>"; };
 		FBBBF4731BEDABE6005AD0B1 /* addImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = addImage.swift; path = Utils/addImage.swift; sourceTree = "<group>"; };
 		FBBBF4751BEE4975005AD0B1 /* PromoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PromoTableViewController.swift; path = view/PromoTableViewController.swift; sourceTree = "<group>"; };
+		FBC052CE1BEFA8B9006996E4 /* CNY-Lai-See-Content.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CNY-Lai-See-Content.png"; sourceTree = "<group>"; };
+		FBC052CF1BEFA8B9006996E4 /* CNY-Lai-See-Cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CNY-Lai-See-Cover.png"; sourceTree = "<group>"; };
+		FBC052D01BEFA8B9006996E4 /* CNY-LaiSee-HarryRosen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CNY-LaiSee-HarryRosen.png"; sourceTree = "<group>"; };
+		FBC052D11BEFA8B9006996E4 /* CNY-Master-Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CNY-Master-Background.png"; sourceTree = "<group>"; };
+		FBC052D21BEFA8B9006996E4 /* Gift-List-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gift-List-Icon.png"; sourceTree = "<group>"; };
+		FBC052D31BEFA8B9006996E4 /* HomePage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HomePage.png; sourceTree = "<group>"; };
+		FBC052D41BEFA8B9006996E4 /* WelcomePage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WelcomePage.png; sourceTree = "<group>"; };
 		FBDB414D1BEE560300F1B88C /* HomeViewController_bak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController_bak.swift; path = view/HomeViewController_bak.swift; sourceTree = "<group>"; };
 		FBDB414F1BEE576500F1B88C /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageViewController.swift; path = view/HomePageViewController.swift; sourceTree = "<group>"; };
 		FBDB41581BEE6BDB00F1B88C /* Setting+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Setting+CoreDataProperties.swift"; path = "beaconscan/CoreData/Setting+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -155,17 +163,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4963148F1BED63AD0021B51B /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				496314941BED6C080021B51B /* HomePage.png */,
-				496314921BED66940021B51B /* CNY-Master-Background.png */,
-				496314901BED63D00021B51B /* WelcomePage.png */,
-			);
-			name = Assets;
-			path = beaconscan;
-			sourceTree = SOURCE_ROOT;
-		};
 		4976B7D11BE5887A009E794E = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +187,7 @@
 		4976B7DC1BE5887A009E794E /* beaconscan */ = {
 			isa = PBXGroup;
 			children = (
-				4963148F1BED63AD0021B51B /* Assets */,
+				FBC052CD1BEFA8B9006996E4 /* Assets */,
 				FB94B19D1BEA316600D3E5DC /* InfuseAPI */,
 				FB94B1961BE9ACEA00D3E5DC /* Utils */,
 				FB94B16E1BE9198700D3E5DC /* Cells */,
@@ -356,6 +353,21 @@
 			path = beaconscan;
 			sourceTree = SOURCE_ROOT;
 		};
+		FBC052CD1BEFA8B9006996E4 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FBC052CE1BEFA8B9006996E4 /* CNY-Lai-See-Content.png */,
+				FBC052CF1BEFA8B9006996E4 /* CNY-Lai-See-Cover.png */,
+				FBC052D01BEFA8B9006996E4 /* CNY-LaiSee-HarryRosen.png */,
+				FBC052D11BEFA8B9006996E4 /* CNY-Master-Background.png */,
+				FBC052D21BEFA8B9006996E4 /* Gift-List-Icon.png */,
+				FBC052D31BEFA8B9006996E4 /* HomePage.png */,
+				FBC052D41BEFA8B9006996E4 /* WelcomePage.png */,
+			);
+			name = Assets;
+			path = beaconscan/Assets;
+			sourceTree = SOURCE_ROOT;
+		};
 		FBDB41571BEE6B5C00F1B88C /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,7 +445,7 @@
 				TargetAttributes = {
 					4976B7D91BE5887A009E794E = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = KZTU89HESF;
+						DevelopmentTeam = 34JL6X48Z9;
 					};
 					4976B7F01BE5887A009E794E = {
 						CreatedOnToolsVersion = 7.1;
@@ -472,13 +484,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				496314931BED66940021B51B /* CNY-Master-Background.png in Resources */,
-				496314951BED6C080021B51B /* HomePage.png in Resources */,
 				4917F2F21BE5E33A0054A646 /* LaunchScreen.storyboard in Resources */,
-				496314911BED63D00021B51B /* WelcomePage.png in Resources */,
+				FBC052DA1BEFA8B9006996E4 /* HomePage.png in Resources */,
 				4976B7E81BE5887A009E794E /* Assets.xcassets in Resources */,
+				FBC052D51BEFA8B9006996E4 /* CNY-Lai-See-Content.png in Resources */,
+				FBC052D91BEFA8B9006996E4 /* Gift-List-Icon.png in Resources */,
+				FBC052DB1BEFA8B9006996E4 /* WelcomePage.png in Resources */,
 				4917F2F51BE5E3600054A646 /* Info.plist in Resources */,
+				FBC052D81BEFA8B9006996E4 /* CNY-Master-Background.png in Resources */,
 				4917F2EF1BE5E32E0054A646 /* Main.storyboard in Resources */,
+				FBC052D61BEFA8B9006996E4 /* CNY-Lai-See-Cover.png in Resources */,
+				FBC052D71BEFA8B9006996E4 /* CNY-LaiSee-HarryRosen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,7 +727,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = beaconscan/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.bosco;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.wayne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "beaconscan/beaconscan-Bridging-Header.h";
@@ -728,7 +744,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = beaconscan/Base.lproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.bosco;
+				PRODUCT_BUNDLE_IDENTIFIER = com.infusecreativeinc.wayne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "beaconscan/beaconscan-Bridging-Header.h";

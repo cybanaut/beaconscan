@@ -16,7 +16,6 @@ class PromoTableViewController: UIViewController, UITableViewDelegate, UITableVi
     var retailers : [Retailer]!
     var api : InfuseAPI!
     
-    //var viewLinks : [ViewInfo]!
     var preferredLanguages : NSLocale!
     var pre = NSLocale.preferredLanguages()[0]
     
@@ -25,13 +24,6 @@ class PromoTableViewController: UIViewController, UITableViewDelegate, UITableVi
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        /*
-        viewLinks = [ViewInfo]()
-        viewLinks.append(ViewInfo(title: "Shop 1", segue: "shop" ,description: "Get sports equipment here", image: ""))
-        viewLinks.append(ViewInfo(title: "Shop 2", segue: "category", description: "Christmas toys on sale now", image: ""))
-        viewLinks.append(ViewInfo(title: "Shop 3", segue: "cart", description: "Biggest Bookstore in town", image: ""))
-        */
         self.retailers = [Retailer]()
         self.api = InfuseAPI()
         
