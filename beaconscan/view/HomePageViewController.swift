@@ -59,11 +59,11 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
         let knownBeacons = beacons.filter{ $0.proximity != CLProximity.Unknown }
-        if (knownBeacons.count > 0) {
+        if (knownBeacons.count > 0 && (knownBeacons[0].proximity.rawValue==1 || knownBeacons[0].proximity.rawValue==2)) {
             locationManager.stopRangingBeaconsInRegion(region);
             spinner.stopAnimating();
             let closestBeacon = knownBeacons[0] as CLBeacon
-            // print(closestBeacon);
+             print(closestBeacon);
             // print(closestBeacon.proximityUUID.UUIDString);
             // print(closestBeacon.major);
             // print(closestBeacon.minor);
