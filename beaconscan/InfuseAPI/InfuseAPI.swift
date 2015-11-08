@@ -110,9 +110,8 @@ class InfuseAPI {
             // The JSONObjectWithData constructor didn't return an error. But, we should still
             // check and make sure that json has a value using optional binding.
             if let parseJSON = json {
-                // Okay, the parsedJSON is here, let's get the value for 'success' out of it
-                let success = parseJSON["success"] as? Int
-                print("Succes: \(success)")
+                // Okay, the parsedJSON is here, let's print all its contents
+                print("return_data: \(parseJSON)")
             }
             else {
                 // Woa, okay the json object was nil, something went worng. Maybe the server isn't running?

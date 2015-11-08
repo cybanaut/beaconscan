@@ -22,35 +22,11 @@ class ViewController: UIViewController {
         self.view.addBackground("WelcomePage.png")
         
         // Do any additional setup after loading the view, typically from a nib.
-        /*
-        locationManager.delegate=self;
-        if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.AuthorizedWhenInUse) {
-            locationManager.requestWhenInUseAuthorization()
-  
-        }
-        locationManager.startRangingBeaconsInRegion(region)
-*/
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
-        let knownBeacons = beacons.filter{ $0.proximity != CLProximity.Unknown }
-        if (knownBeacons.count > 0) {
-            let closestBeacon = knownBeacons[0] as CLBeacon
-//            self.view.backgroundColor = self.colours[closestBeacon.minor.integerValue]
-//            print(closestBeacon);
-            print(closestBeacon.proximityUUID.UUIDString);
-            print(closestBeacon.major);
-            print(closestBeacon.minor);
-            print(closestBeacon.rssi);
- //           print(region);
- //           print(region.proximityUUID);
- //           print(region.identifier);
-        }
     }
 }
 

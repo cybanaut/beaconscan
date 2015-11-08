@@ -60,13 +60,24 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
         let knownBeacons = beacons.filter{ $0.proximity != CLProximity.Unknown }
         if (knownBeacons.count > 0) {
+            locationManager.stopRangingBeaconsInRegion(region);
+            spinner.stopAnimating();
             let closestBeacon = knownBeacons[0] as CLBeacon
-            //            self.view.backgroundColor = self.colours[closestBeacon.minor.integerValue]
-            //            print(closestBeacon);
-            print(closestBeacon.proximityUUID.UUIDString);
-            print(closestBeacon.major);
-            print(closestBeacon.minor);
-            print(closestBeacon.rssi);
+            // print(closestBeacon);
+            // print(closestBeacon.proximityUUID.UUIDString);
+            // print(closestBeacon.major);
+            // print(closestBeacon.minor);
+            // print(closestBeacon.rssi);
+            let beaconParm = ["uuid":closestBeacon.proximityUUID.UUIDString, "major":closestBeacon.major, "minor":closestBeacon.minor]
+            let body: NSMutableDictionary = NSMutableDictionary()
+            
+            body.setValue(beaconParm, forKey: "beacon")
+            body.setValue(language, forKey: "language")
+
+            api.getLaiSee(body)
+            
+            performSegueWithIdentifier("LaiSeeView", sender: self)
+            
             //           print(region);
             //           print(region.proximityUUID);
             //           print(region.identifier);
@@ -75,15 +86,16 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
     
     
     @IBAction func getLaiSee(sender: AnyObject) {
-        let beaconParm = ["uuid":"F94DBB23-2266-7822-3782-57BEAC0952AC", "major":"1", "minor":"1"]
+        let beaconParm = ["uuid":"F94DBB23-2266-7822-3782-57BEAC0952AC", "major":"1", "minor":"2"]
         let body: NSMutableDictionary = NSMutableDictionary()
-        
+
         body.setValue(beaconParm, forKey: "beacon")
         body.setValue(language, forKey: "language")
-       
-        //api.getLaiSee(body)
+        body.setValue("greeting", forKey: "demo")
+
+        api.getLaiSee(body)
         
-        //performSegueWithIdentifier("LaiSeeView", sender: self)
+        performSegueWithIdentifier("LaiSeeView", sender: self)
         
     }
     
