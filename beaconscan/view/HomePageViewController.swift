@@ -19,7 +19,7 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
     let spinner = UIActivityIndicatorView( activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
     
     var laiSee = [LaiSeeData]!()
-    var shopData = [RetailerProfile]!()
+    var shopData = [RetailerProfile]()
     var api : InfuseAPI!
     var LaiSeePocketData : NSDictionary!
     //var shopData:NSDictionary!
@@ -97,7 +97,8 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             getRetailerPage(beaconParm)
         //}
 */
-
+//let beaconParm = ["uuid":"F94DBB23-2266-7822-3782-57BEAC0952AC", "major":"1", "minor":"2"]
+  //      getRetailerPage(beaconParm)
     }
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
@@ -136,12 +137,16 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             }
 */
             let defaults = NSUserDefaults.standardUserDefaults()
-            
-            let mode = defaults.valueForKey("mode") as! Int
-            let gender = defaults.valueForKey("gender") as! Int
-            let ageGroup = defaults.valueForKey("ageGroup") as! Int
+            var mode :Int
+            if (defaults.valueForKey("mode") != nil) {
+                mode = defaults.valueForKey("mode") as! Int
+            } else {
+                mode = 1
+            }
+            //let gender = defaults.valueForKey("gender") as! Int
+            //let ageGroup = defaults.valueForKey("ageGroup") as! Int
 
-                
+            
             let beaconParm = ["uuid":closestBeacon.proximityUUID.UUIDString, "major":closestBeacon.major, "minor":closestBeacon.minor]
             
             if mode == 0{
@@ -168,12 +173,13 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             print("after completion");
             print(return_data)
             for item in return_data {
+                print(item)
                 self.shopData.append(item)
                 //self.shopData = item as! NSDictionary
                 print("before");
                 print(self.shopData);
             }
-            //self.goNextPage()
+            self.goRetailer()
         })
         
         
@@ -205,6 +211,13 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
         performSegueWithIdentifier("LaiSeeView", sender: self)
 
     }
+    
+    func goRetailer() {
+        spinner.stopAnimating()
+        performSegueWithIdentifier("retailerView", sender: self)
+    
+    }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "LaiSeeView"){
             if  laiSee.count>0
@@ -215,6 +228,16 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             }
             
         }
+        if(segue.identifier == "retailerView"){
+            if  shopData.count>0
+            {
+                let passRetailer = shopData[0]
+                let controller = segue.destinationViewController as! RetailerViewController
+                controller.retailerProfile = passRetailer
+            }
+            
+        }
+        
     }
 
 

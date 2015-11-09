@@ -51,6 +51,26 @@ class Utils {
             }
         }
     }
+    class func asyncLoadLogo(photo: String, imageView : UIImageView){
+        
+        let downloadQueue = dispatch_queue_create("com.beaconscan.processsdownload", nil)
+        
+        dispatch_async(downloadQueue) {
+            
+            let data = NSData(contentsOfURL: NSURL(string: photo)!)
+            
+            var image : UIImage?
+            if data != nil {
+                
+                image = UIImage(data: data!)!
+            }
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                imageView.image = image
+            }
+        }
+    }
+
 
     
     class func getStringFromJSON(data: NSDictionary, key: String) -> String{

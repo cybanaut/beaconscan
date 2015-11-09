@@ -25,7 +25,12 @@ class RetailerViewController: UIViewController, UITableViewDelegate, UITableView
         title = "Retailer"
         
         Utils.asyncLoadRetailerProfileCover(retailerProfile, imageView: profileImageView)
-        
+        /*
+        for offer in retailerProfile.offers {
+            print(offer)
+            self.offers.append(offer as! Offer)
+        }
+*/
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,20 +54,18 @@ class RetailerViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // return viewLinks.count;
-        return offers.count
+        return retailerProfile.offers.count
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("RetailerCell") as! RetailerCell
         
-        for offer in retailerProfile.offers {
-            self.offers.append(offer as! Offer)
-        }
+        let info = retailerProfile.offers[indexPath.row] as! NSDictionary
+        cell.titleLabel.text = info["title"] as? String
+        cell.subtitleLabel.text = info["body"] as? String
+        Utils.asyncLoadLogo((info["image"] as! String), imageView: cell.logo)
         
-        let info = offers[indexPath.row]
-        cell.titleLabel.text = info.title
-        cell.subtitleLabel.text = info.body
         /*
         let url = NSURL(string: "http://beacon.infusecreativeinc.com/int/1/tn/")
         let data = NSData(contentsOfURL: url!)
