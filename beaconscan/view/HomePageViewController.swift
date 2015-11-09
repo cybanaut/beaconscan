@@ -86,9 +86,6 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             //           print(region.identifier);
         }
     }
-    @IBAction func getButtonTapped(sender: AnyObject) {
-        goNextPage()
-    }
     
     func getLaiSee(parm : NSDictionary) {
         let body: NSMutableDictionary = NSMutableDictionary()

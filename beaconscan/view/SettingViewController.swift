@@ -28,7 +28,7 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         ageGroupPicker.dataSource = self
         ageGroupPicker.delegate = self
         
-        selectModeSwitch.addTarget(self, action: Selector("stateChanged:"), forControlEvents: UIControlEvents.ValueChanged)
+        //selectModeSwitch.addTarget(self, action: Selector("stateChanged:"), forControlEvents: UIControlEvents.ValueChanged)
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -53,8 +53,39 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func showButtonTapped(sender: AnyObject) {
-        showData()
+    
+    
+    @IBAction func saveButtonTapped(sender: AnyObject) {
+        var gender:Int!
+        let mode:Int!
+        let ageGroup:Int!
+        
+        switch genderSegment.selectedSegmentIndex
+        {
+        case 0:
+            print("Male")
+            gender = 0
+        case 1:
+            print("Female")
+            gender = 1
+        case 2:
+            print("Not Disclosed")
+            gender = 2
+        default:
+            break;
+        }
+        
+        if selectModeSwitch.on {
+            print("Special Offer Mode")
+            demoModeLabel.text = "Demo Mode: Special Offer"
+            mode = 0
+        } else {
+            print("Lai See Mode")
+            demoModeLabel.text = "Demo Mode: Lai See"
+            mode = 1
+        }
+        
+        
     }
     
     func showData() {

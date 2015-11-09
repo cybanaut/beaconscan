@@ -153,3 +153,62 @@ func getLaiSee(params : NSMutableDictionary, completion: (([LaiSeeData]) -> Void
         task.resume()
     }
 }
+
+func getRetailerProfile(params : NSMutableDictionary, completion: (([RetailerProfile]) -> Void)!) {
+    let request = NSMutableURLRequest(URL: NSURL(string: "http://beacon.infusecreativeinc.com/beacon/getRetailerPage.php")!)
+    let session = NSURLSession.sharedSession()
+    request.HTTPMethod = "POST"
+    
+    do {
+        request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(params, options: .PrettyPrinted)
+        print(request)
+    } catch {
+        //handle error. Probably return or mark function as throws
+        print(error)
+        return
+    }
+    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+    request.addValue("application/json", forHTTPHeaderField: "Accept")
+    
+    
+    let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+        // handle error
+        guard error == nil else { return }
+        
+        print("Response: \(response)")
+        let strData = NSString(data: data!, encoding: NSUTF8StringEncoding)
+        print("Body: \(strData)")
+        
+        let json: NSDictionary?
+        do {
+            json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableLeaves) as? NSDictionary
+        } catch let dataError {
+            // Did the JSONObjectWithData constructor return an error? If so, log the error to the console
+            print(dataError)
+            let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            print("Error could not parse JSON: '\(jsonStr)'")
+            // return or throw?
+            return
+        }
+        
+        
+        // The JSONObjectWithData constructor didn't return an error. But, we should still
+        // check and make sure that json has a value using optional binding.
+        var retailerProfle = [RetailerProfile]()
+        if let parseJSON = json {
+            // Okay, the parsedJSON is here, let's print all its contents
+            print("return_data: \(parseJSON)")
+            let return_data = RetailerProfile(data: parseJSON )
+            retailerProfle.append(return_data)
+            completion(retailerProfle)
+        }
+        else {
+            // Woa, okay the json object was nil, something went worng. Maybe the server isn't running?
+            let jsonStr = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            print("Error could not parse JSON: \(jsonStr)")
+        }
+    })
+    
+    task.resume()
+
+}

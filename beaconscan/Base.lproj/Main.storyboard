@@ -118,7 +118,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="news" translatesAutoresizingMaskIntoConstraints="NO" id="6eI-7O-SqJ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon-camera" translatesAutoresizingMaskIntoConstraints="NO" id="6eI-7O-SqJ">
                                                     <rect key="frame" x="18" y="4" width="35" height="35"/>
                                                     <animations/>
                                                 </imageView>
@@ -319,9 +319,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZDE-0Q-eqC">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="mDB-67-i2X"/>
-                        <barButtonItem key="rightBarButtonItem" title="show" id="O56-AU-e72">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="O56-AU-e72">
                             <connections>
-                                <action selector="showButtonTapped:" destination="Axr-95-dRK" id="9rI-3d-jb0"/>
+                                <action selector="saveButtonTapped:" destination="Axr-95-dRK" id="2af-ld-z7I"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1078,16 +1078,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSX-gH-pHR">
-                                <rect key="frame" x="280" y="129" width="30" height="30"/>
-                                <animations/>
-                                <state key="normal" title="get"/>
-                                <connections>
-                                    <action selector="getButtonTapped:" destination="k5Z-U5-h42" eventType="touchUpInside" id="5W3-me-xDB"/>
-                                    <action selector="getLaiSee:" destination="k5Z-U5-h42" eventType="touchUpInside" id="LPK-pi-CHn"/>
-                                    <action selector="go:" destination="k5Z-U5-h42" eventType="touchUpInside" id="M61-r6-URN"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAP-TJ-fhA" userLabel="promo">
                                 <rect key="frame" x="81" y="291" width="63" height="30"/>
                                 <animations/>
@@ -1096,6 +1086,13 @@
                                 </state>
                                 <connections>
                                     <segue destination="A1F-kY-ZGs" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="WDd-2Q-07J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdJ-Di-9z7">
+                                <rect key="frame" x="279" y="129" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="HQ8-8N-rT8" kind="show" id="ZYb-SX-nuR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1109,7 +1106,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="menuButton" destination="wms-bh-4e7" id="Stx-um-gSJ"/>
-                        <segue destination="HQ8-8N-rT8" kind="show" identifier="LaiSeeView" id="0Dy-yL-lRI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LhR-bF-254" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1177,8 +1173,12 @@
                             <constraint firstAttribute="leadingMargin" secondItem="vSu-z3-aRt" secondAttribute="leading" id="xRe-O8-qXI"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="LaiSeePocketBody" destination="Soo-gq-fxU" id="s4o-it-c9T"/>
+                        <outlet property="LaiSeePocketTitle" destination="QGT-c5-XVw" id="aVc-Dj-z7n"/>
                         <outlet property="body" destination="Soo-gq-fxU" id="DE4-t7-sPF"/>
                         <outlet property="title" destination="QGT-c5-XVw" id="zlX-UL-hDq"/>
                     </connections>
@@ -1334,9 +1334,9 @@
     <resources>
         <image name="CNY-Lai-See-Content.png" width="600" height="1000"/>
         <image name="CNY-Master-Background.png" width="1080" height="1920"/>
+        <image name="Icon-camera" width="33" height="33"/>
         <image name="WelcomePage.png" width="1080" height="1920"/>
         <image name="menu" width="22" height="22"/>
-        <image name="news" width="33" height="33"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Rmo-2x-hrS"/>
