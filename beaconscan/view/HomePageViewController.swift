@@ -104,7 +104,7 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
         let knownBeacons = beacons.filter{ $0.proximity != CLProximity.Unknown }
         if (knownBeacons.count > 0 && (knownBeacons[0].proximity==CLProximity.Immediate || knownBeacons[0].proximity==CLProximity.Near)) {
             locationManager.stopRangingBeaconsInRegion(region);
-            spinner.stopAnimating();
+            
             let closestBeacon = knownBeacons[0] as CLBeacon
             // print(closestBeacon);
              print(closestBeacon.proximityUUID.UUIDString);
@@ -137,19 +137,19 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
 */
             let defaults = NSUserDefaults.standardUserDefaults()
             
-            let mode = defaults.valueForKey("mode")
-            let gender = defaults.valueForKey("gender")
-            let ageGroup = defaults.valueForKey("ageGroup")
+            let mode = defaults.valueForKey("mode") as! Int
+            let gender = defaults.valueForKey("gender") as! Int
+            let ageGroup = defaults.valueForKey("ageGroup") as! Int
 
                 
             let beaconParm = ["uuid":closestBeacon.proximityUUID.UUIDString, "major":closestBeacon.major, "minor":closestBeacon.minor]
             
-            //if mode == 0{
+            if mode == 0{
                 getLaiSee(beaconParm)
-            //} else {
+            } else {
             //    getLaiSee(beaconParm)
-                //getRetailerPage(beaconParm)
-            //}
+                getRetailerPage(beaconParm)
+            }
             
             //           print(region);
             //           print(region.proximityUUID);
@@ -201,6 +201,7 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
         
     }
     func goNextPage() {
+        spinner.stopAnimating();
         performSegueWithIdentifier("LaiSeeView", sender: self)
 
     }

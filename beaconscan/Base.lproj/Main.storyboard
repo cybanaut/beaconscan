@@ -1146,18 +1146,18 @@
                                 <rect key="frame" x="20" y="228" width="335" height="401"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8c-3c-jxB">
-                                <rect key="frame" x="20" y="228" width="335" height="105"/>
+                                <rect key="frame" x="45" y="241" width="262" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoU-W9-eLX">
-                                <rect key="frame" x="20" y="341" width="335" height="288"/>
+                                <rect key="frame" x="45" y="313" width="262" height="293"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlp-BO-1ni">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlp-BO-1ni">
                                 <rect key="frame" x="20" y="233" width="331" height="396"/>
                                 <state key="normal" title="Open" image="CNY-Lai-See-Cover.png"/>
                                 <connections>
@@ -1167,18 +1167,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Rlp-BO-1ni" firstAttribute="top" secondItem="ggv-LG-cRw" secondAttribute="bottom" constant="169" id="8sm-yC-LY3"/>
-                            <constraint firstItem="TAj-2I-Q7b" firstAttribute="top" secondItem="I8c-3c-jxB" secondAttribute="bottom" constant="334" id="B1p-4t-Pcg"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Rlp-BO-1ni" secondAttribute="leading" id="BuR-es-BrP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Rlp-BO-1ni" secondAttribute="trailing" constant="4" id="SAM-se-3CG"/>
-                            <constraint firstItem="TAj-2I-Q7b" firstAttribute="top" secondItem="Rlp-BO-1ni" secondAttribute="bottom" constant="38" id="Sub-Y6-Uvb"/>
-                            <constraint firstItem="I8c-3c-jxB" firstAttribute="top" secondItem="ggv-LG-cRw" secondAttribute="bottom" constant="164" id="TgN-I4-Oz9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="I8c-3c-jxB" secondAttribute="trailing" id="VQJ-Hw-7bU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cZ0-GQ-WBo" secondAttribute="trailing" id="cpm-Mm-1fH"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="cZ0-GQ-WBo" secondAttribute="leading" id="gql-ym-01v"/>
-                            <constraint firstItem="cZ0-GQ-WBo" firstAttribute="top" secondItem="ggv-LG-cRw" secondAttribute="bottom" constant="164" id="hq0-9j-TgT"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="I8c-3c-jxB" secondAttribute="leading" id="k08-Qm-k22"/>
-                            <constraint firstItem="TAj-2I-Q7b" firstAttribute="top" secondItem="cZ0-GQ-WBo" secondAttribute="bottom" constant="38" id="vUi-aF-DfG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cZ0-GQ-WBo" secondAttribute="trailing" id="31z-Ij-pFo"/>
+                            <constraint firstItem="TAj-2I-Q7b" firstAttribute="top" secondItem="cZ0-GQ-WBo" secondAttribute="bottom" constant="38" id="To9-OZ-042"/>
+                            <constraint firstItem="I8c-3c-jxB" firstAttribute="top" secondItem="ggv-LG-cRw" secondAttribute="bottom" constant="177" id="kXU-i0-YVa"/>
+                            <constraint firstItem="I8c-3c-jxB" firstAttribute="leading" secondItem="EMi-gp-NMB" secondAttribute="leadingMargin" constant="25" id="lBM-xB-nlo"/>
+                            <constraint firstItem="cZ0-GQ-WBo" firstAttribute="top" secondItem="ggv-LG-cRw" secondAttribute="bottom" constant="164" id="o50-4n-eHI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I8c-3c-jxB" secondAttribute="trailing" constant="48" id="pZ4-TT-r4i"/>
+                            <constraint firstItem="TAj-2I-Q7b" firstAttribute="top" secondItem="I8c-3c-jxB" secondAttribute="bottom" constant="334" id="qWf-WX-89u"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="cZ0-GQ-WBo" secondAttribute="leading" id="vT0-h0-Qps"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lKG-Js-ebc"/>
