@@ -11,16 +11,17 @@ import UIKit
 class LaiSeePocketViewController: UIViewController {
 
     //@IBOutlet weak var OpenButton: UIButton!
-//    @IBOutlet weak var LaiSeePocketTitle: UILabel!
-//    @IBOutlet weak var LaiSeePocketBody: UILabel!
+    @IBOutlet weak var LaiSeePocketTitle: UILabel!
+    @IBOutlet weak var LaiSeePocketBody: UILabel!
     
-//    var LaiSeePocketData : LaiSeeData!
+    var LaiSeePocketData : LaiSeeData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //LaiSeePocketTitle.text = LaiSeePocketData.title
-        //LaiSeePocketBody.text = LaiSeePocketData.body
-        //print(LaiSeePocketData)
+        self.view.addBackground("CNY-Master-Background.png")
+        LaiSeePocketTitle.text = LaiSeePocketData.title
+        LaiSeePocketBody.text = LaiSeePocketData.body
+        print(LaiSeePocketData)
         
         
     }

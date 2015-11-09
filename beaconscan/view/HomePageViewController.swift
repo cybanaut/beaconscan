@@ -18,6 +18,7 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
     let spinner = UIActivityIndicatorView( activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
     
     var laiSee = [LaiSeeData]!()
+    var shopData = [RetailerProfile]!()
     var api : InfuseAPI!
     var LaiSeePocketData : NSDictionary!
     
@@ -60,9 +61,9 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
         }
         locationManager.startRangingBeaconsInRegion(region)
         
-        //let beaconParm = ["uuid":"F94DBB23-2266-7822-3782-57BEAC0952AC", "major":"1", "minor":"2"]
-        //getLaiSee(beaconParm)
-
+        let beaconParm = ["uuid":"F94DBB23-2266-7822-3782-57BEAC0952AC", "major":"1", "minor":"2"]
+        getLaiSee(beaconParm)
+        //getRetailerPage(beaconParm)
     }
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
@@ -86,6 +87,28 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             //           print(region.identifier);
         }
     }
+    
+    func getRetailerPage(parm : NSDictionary) {
+        let body: NSMutableDictionary = NSMutableDictionary()
+        
+        body.setValue(parm, forKey: "beacon")
+        body.setValue(language, forKey: "language")
+        //body.setValue("greeting", forKey: "demo")
+        
+        api.getRetailerProfile(body, completion: { (return_data:[RetailerProfile]) in
+            print("after completion");
+            print(return_data)
+            for item in return_data {
+                self.shopData.append(item)
+                print("before");
+                print(self.laiSee);
+            }
+            //self.goNextPage()
+        })
+        
+        
+    }
+
     
     func getLaiSee(parm : NSDictionary) {
         let body: NSMutableDictionary = NSMutableDictionary()
@@ -117,7 +140,7 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             {
                 let passLaiSee = laiSee[0]
                 let controller = segue.destinationViewController as! LaiSeePocketViewController
-                //controller.LaiSeePocketData = passLaiSee
+                controller.LaiSeePocketData = passLaiSee
             }
             
         }

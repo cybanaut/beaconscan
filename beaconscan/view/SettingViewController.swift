@@ -48,9 +48,9 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     
     @IBAction func saveButtonTapped(sender: AnyObject) {
-        print(111 ,mode)
-        print(222 ,ageGroupVal)
-        print(333 ,gender)
+        // print(111 ,mode)
+        // print(222 ,ageGroupVal)
+        // print(333 ,gender)
         //1
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
