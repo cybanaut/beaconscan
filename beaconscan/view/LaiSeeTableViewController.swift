@@ -25,9 +25,12 @@ class LaiSeeTableViewController: UITableViewController {
         let fetchRequest = NSFetchRequest(entityName: "LaiSee")
         do {
             let results = try managedContext.executeFetchRequest(fetchRequest)
-                for var n = 0; n < results.count; n++ {
-                    LaiSeePockets.append(results[n] as NSDictionary)
-                }
+            
+            for result in results{
+                let item = LaiSeeData(data: result as! NSDictionary)
+                LaiSeePockets.append(item)
+            }
+                
             } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
