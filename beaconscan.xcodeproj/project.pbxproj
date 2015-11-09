@@ -20,7 +20,7 @@
 		FB2BA90E1BE7C14500CC110B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2BA90D1BE7C14500CC110B /* SettingViewController.swift */; };
 		FB2BA9101BE7C2C700CC110B /* LaiSeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2BA90F1BE7C2C700CC110B /* LaiSeeViewController.swift */; };
 		FB854D6C1BF0C57C00077FE3 /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB854D6B1BF0C57C00077FE3 /* OfferCell.swift */; };
-		FB854D6E1BF0C88A00077FE3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB854D6D1BF0C88A00077FE3 /* ProfileViewController.swift */; };
+		FB854D701BF0DFA900077FE3 /* RetailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB854D6F1BF0DFA900077FE3 /* RetailerViewController.swift */; };
 		FB94B1431BE8310600D3E5DC /* LaiSeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1421BE8310600D3E5DC /* LaiSeeTableViewController.swift */; };
 		FB94B1451BE8319500D3E5DC /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1441BE8319500D3E5DC /* PersonalInfoViewController.swift */; };
 		FB94B1861BE9198700D3E5DC /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1701BE9198700D3E5DC /* EventCell.swift */; };
@@ -54,7 +54,6 @@
 		FBC052DB1BEFA8B9006996E4 /* WelcomePage.png in Resources */ = {isa = PBXBuildFile; fileRef = FBC052D41BEFA8B9006996E4 /* WelcomePage.png */; };
 		FBC052DD1BF01516006996E4 /* RetailerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC052DC1BF01516006996E4 /* RetailerProfile.swift */; };
 		FBC052DF1BF016CF006996E4 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC052DE1BF016CF006996E4 /* Offer.swift */; };
-		FBDB414E1BEE560300F1B88C /* HomeViewController_bak.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB414D1BEE560300F1B88C /* HomeViewController_bak.swift */; };
 		FBDB41501BEE576500F1B88C /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB414F1BEE576500F1B88C /* HomePageViewController.swift */; };
 		FBDB415A1BEE6BDB00F1B88C /* Setting+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB41581BEE6BDB00F1B88C /* Setting+CoreDataProperties.swift */; };
 		FBDB415B1BEE6BDB00F1B88C /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB41591BEE6BDB00F1B88C /* Setting.swift */; };
@@ -104,7 +103,7 @@
 		FB2BA90D1BE7C14500CC110B /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = beaconscan/view/SettingViewController.swift; sourceTree = SOURCE_ROOT; };
 		FB2BA90F1BE7C2C700CC110B /* LaiSeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaiSeeViewController.swift; path = beaconscan/view/LaiSeeViewController.swift; sourceTree = SOURCE_ROOT; };
 		FB854D6B1BF0C57C00077FE3 /* OfferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
-		FB854D6D1BF0C88A00077FE3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = view/ProfileViewController.swift; sourceTree = "<group>"; };
+		FB854D6F1BF0DFA900077FE3 /* RetailerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RetailerViewController.swift; path = view/RetailerViewController.swift; sourceTree = "<group>"; };
 		FB94B1421BE8310600D3E5DC /* LaiSeeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaiSeeTableViewController.swift; path = beaconscan/view/LaiSeeTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		FB94B1441BE8319500D3E5DC /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonalInfoViewController.swift; path = beaconscan/view/PersonalInfoViewController.swift; sourceTree = SOURCE_ROOT; };
 		FB94B1701BE9198700D3E5DC /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
@@ -138,7 +137,6 @@
 		FBC052D41BEFA8B9006996E4 /* WelcomePage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WelcomePage.png; sourceTree = "<group>"; };
 		FBC052DC1BF01516006996E4 /* RetailerProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RetailerProfile.swift; path = InfuseAPI/RetailerProfile.swift; sourceTree = "<group>"; };
 		FBC052DE1BF016CF006996E4 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Offer.swift; path = InfuseAPI/Offer.swift; sourceTree = "<group>"; };
-		FBDB414D1BEE560300F1B88C /* HomeViewController_bak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController_bak.swift; path = view/HomeViewController_bak.swift; sourceTree = "<group>"; };
 		FBDB414F1BEE576500F1B88C /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageViewController.swift; path = view/HomePageViewController.swift; sourceTree = "<group>"; };
 		FBDB41581BEE6BDB00F1B88C /* Setting+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Setting+CoreDataProperties.swift"; path = "beaconscan/CoreData/Setting+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FBDB41591BEE6BDB00F1B88C /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Setting.swift; path = beaconscan/CoreData/Setting.swift; sourceTree = "<group>"; };
@@ -251,10 +249,9 @@
 				FB94B1421BE8310600D3E5DC /* LaiSeeTableViewController.swift */,
 				FB94B1441BE8319500D3E5DC /* PersonalInfoViewController.swift */,
 				FBBBF4751BEE4975005AD0B1 /* PromoTableViewController.swift */,
-				FBDB414D1BEE560300F1B88C /* HomeViewController_bak.swift */,
 				FBDB414F1BEE576500F1B88C /* HomePageViewController.swift */,
 				FBDB41611BEEAD0F00F1B88C /* LaiSeePocketViewController.swift */,
-				FB854D6D1BF0C88A00077FE3 /* ProfileViewController.swift */,
+				FB854D6F1BF0DFA900077FE3 /* RetailerViewController.swift */,
 			);
 			name = view;
 			path = beaconscan;
@@ -553,10 +550,10 @@
 				FB94B1861BE9198700D3E5DC /* EventCell.swift in Sources */,
 				FB94B18E1BE9198700D3E5DC /* MetaCell.swift in Sources */,
 				FB97981B1BEB7FB8000C1FB2 /* RetailerCell.swift in Sources */,
-				FB854D6E1BF0C88A00077FE3 /* ProfileViewController.swift in Sources */,
 				FB94B1911BE9198700D3E5DC /* NavigationTableCell.swift in Sources */,
 				FBBBF4761BEE4975005AD0B1 /* PromoTableViewController.swift in Sources */,
 				FB94B18F1BE9198700D3E5DC /* NavigationFullCell.swift in Sources */,
+				FB854D701BF0DFA900077FE3 /* RetailerViewController.swift in Sources */,
 				FB94B1951BE9198700D3E5DC /* MegaTheme.swift in Sources */,
 				FB94B1901BE9198700D3E5DC /* NavigationSideCell.swift in Sources */,
 				FBC052DF1BF016CF006996E4 /* Offer.swift in Sources */,
@@ -565,7 +562,6 @@
 				FB94B1A11BEA424600D3E5DC /* Retailer.swift in Sources */,
 				FB94B1891BE9198700D3E5DC /* ProductCell.swift in Sources */,
 				FB94B18B1BE9198700D3E5DC /* AlbumCell.swift in Sources */,
-				FBDB414E1BEE560300F1B88C /* HomeViewController_bak.swift in Sources */,
 				FB94B18A1BE9198700D3E5DC /* ProductImageCell.swift in Sources */,
 				FBDB41501BEE576500F1B88C /* HomePageViewController.swift in Sources */,
 				FB2BA90E1BE7C14500CC110B /* SettingViewController.swift in Sources */,
