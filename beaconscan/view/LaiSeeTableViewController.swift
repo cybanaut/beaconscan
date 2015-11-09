@@ -13,21 +13,22 @@ class LaiSeeTableViewController: UITableViewController {
 
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var LaiSeeTable: UITableView!
     
-    var LaiSeePockets = [NSManagedObject]()
+    var LaiSeePockets = [LaiSeeData]()
     
     override func viewDidLoad() {
-        super.viewDidLoad(
+        super.viewDidLoad()
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest(entityName: "LaiSee")
         do {
             let results = try managedContext.executeFetchRequest(fetchRequest)
-            LaiSeePockets = results as! [NSManagedObject]
-            print(LaiSeePockets)
-        } catch let error as NSError {
+                for var n = 0; n < results.count; n++ {
+                    LaiSeePockets.append(results[n] as NSDictionary)
+                }
+            } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
 

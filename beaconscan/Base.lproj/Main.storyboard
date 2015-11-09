@@ -1306,8 +1306,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="LaiSeeTable" destination="Zm9-gi-R4e" id="D5G-RD-HYc"/>
                         <outlet property="menuButton" destination="ogg-MU-Yua" id="Acv-mD-XNg"/>
-                        <outlet property="tableView" destination="Zm9-gi-R4e" id="rc0-KI-Q07"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbf-ED-BOD" sceneMemberID="firstResponder"/>
