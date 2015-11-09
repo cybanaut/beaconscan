@@ -274,18 +274,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dfP-Yn-QUO">
-                                <rect key="frame" x="20" y="219" width="335" height="29"/>
-                                <animations/>
-                                <segments>
-                                    <segment title="Male"/>
-                                    <segment title="Female"/>
-                                    <segment title="Not Disclosed"/>
-                                </segments>
-                                <connections>
-                                    <action selector="selectGender:" destination="Axr-95-dRK" eventType="valueChanged" id="WTB-pY-Zvk"/>
-                                </connections>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Age Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNQ-dr-dH7">
                                 <rect key="frame" x="20" y="288" width="335" height="21"/>
                                 <animations/>
@@ -301,19 +289,31 @@
                                 <rect key="frame" x="0.0" y="288" width="375" height="216"/>
                                 <animations/>
                             </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cja-CP-etM">
+                                <rect key="frame" x="20" y="235" width="335" height="29"/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Second"/>
+                                    <segment title="Not Disclosed"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectGender:" destination="Axr-95-dRK" eventType="valueChanged" id="pbp-T6-tzT"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="pEZ-GD-aX0" secondAttribute="trailing" id="0UZ-Wd-AKs"/>
                             <constraint firstAttribute="leadingMargin" secondItem="fEO-bA-qw9" secondAttribute="leading" id="24x-3o-Y0e"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="cja-CP-etM" secondAttribute="leading" id="8gP-h4-3FO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XnQ-gZ-YZH" secondAttribute="trailing" constant="-20" id="AOS-AC-WvR"/>
                             <constraint firstAttribute="leadingMargin" secondItem="GLI-58-Llw" secondAttribute="leading" id="EHb-J9-WrO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dfP-Yn-QUO" secondAttribute="trailing" id="bgO-Es-k76"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="dfP-Yn-QUO" secondAttribute="leading" id="edE-E6-1AR"/>
+                            <constraint firstItem="cja-CP-etM" firstAttribute="top" secondItem="kzW-kV-EzP" secondAttribute="bottom" constant="171" id="Fnr-Bp-52g"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="cja-CP-etM" secondAttribute="leading" id="Obs-fp-kq7"/>
                             <constraint firstItem="XnQ-gZ-YZH" firstAttribute="leading" secondItem="25G-XE-aFl" secondAttribute="leadingMargin" constant="-20" id="nri-Pi-lB4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IlG-FY-L1t" secondAttribute="trailing" id="t79-R6-pfb"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="dfP-Yn-QUO" secondAttribute="leading" id="x0G-TS-U5u"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cja-CP-etM" secondAttribute="trailing" id="tfo-W0-W6m"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DNQ-dr-dH7" secondAttribute="trailing" id="xyM-Nk-FcQ"/>
                         </constraints>
                     </view>
@@ -327,11 +327,11 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="ageGroupPicker" destination="XnQ-gZ-YZH" id="ffB-AJ-fHk"/>
+                        <outlet property="ageGroupPicker" destination="XnQ-gZ-YZH" id="33A-Mi-I5g"/>
                         <outlet property="demoModeLabel" destination="GLI-58-Llw" id="ifi-nd-gFI"/>
-                        <outlet property="genderSegment" destination="dfP-Yn-QUO" id="ode-Tl-rQf"/>
-                        <outlet property="menuButton" destination="mDB-67-i2X" id="zle-bl-rZO"/>
-                        <outlet property="selectModeSwitch" destination="pEZ-GD-aX0" id="gJ8-hM-TKT"/>
+                        <outlet property="genderSegment" destination="cja-CP-etM" id="vGa-uU-LUU"/>
+                        <outlet property="menuButton" destination="mDB-67-i2X" id="kUv-rv-f5K"/>
+                        <outlet property="selectModeSwitch" destination="pEZ-GD-aX0" id="My4-jZ-fJ7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGo-yV-ZM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1154,13 +1154,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGT-c5-XVw">
                                 <rect key="frame" x="20" y="250" width="326" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="body" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Soo-gq-fxU">
                                 <rect key="frame" x="20" y="303" width="326" height="321"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1229,7 +1229,7 @@
         <!--LaiSee-->
         <scene sceneID="W3U-jk-UNC">
             <objects>
-                <viewController title="LaiSee" id="fer-qe-qBZ" customClass="PromoTableViewController" customModule="beaconscan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LaiSee" id="fer-qe-qBZ" customClass="LaiSeeTableViewController" customModule="beaconscan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4FB-Df-AHu"/>
                         <viewControllerLayoutGuide type="bottom" id="6H6-pA-W0R"/>
@@ -1300,11 +1300,14 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="ADE-sb-hOJ"/>
+                    <navigationItem key="navigationItem" id="ADE-sb-hOJ">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="ogg-MU-Yua"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="tableView" destination="Zm9-gi-R4e" id="Juq-MS-HQi"/>
+                        <outlet property="menuButton" destination="ogg-MU-Yua" id="Acv-mD-XNg"/>
+                        <outlet property="tableView" destination="Zm9-gi-R4e" id="rc0-KI-Q07"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbf-ED-BOD" sceneMemberID="firstResponder"/>
@@ -1339,7 +1342,7 @@
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Rmo-2x-hrS"/>
-        <segue reference="WDd-2Q-07J"/>
+        <segue reference="aRy-7x-CXW"/>
+        <segue reference="97P-CL-L2U"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,7 +13,7 @@
         <attribute name="mode" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Setting" positionX="-54" positionY="-9" width="128" height="90"/>
         <element name="LaiSee" positionX="-54" positionY="18" width="128" height="120"/>
+        <element name="Setting" positionX="-54" positionY="-9" width="128" height="90"/>
     </elements>
 </model>

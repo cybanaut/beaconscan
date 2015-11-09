@@ -7,12 +7,31 @@
 //
 
 import UIKit
+import CoreData
 
 class LaiSeeTableViewController: UITableViewController {
 
+    
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var LaiSeePockets = [NSManagedObject]()
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad(
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "LaiSee")
+        do {
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            LaiSeePockets = results as! [NSManagedObject]
+            print(LaiSeePockets)
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+
+        
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
