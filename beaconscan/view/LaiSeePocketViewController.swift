@@ -10,7 +10,7 @@ import UIKit
 
 class LaiSeePocketViewController: UIViewController {
 
-    //@IBOutlet weak var OpenButton: UIButton!
+    @IBOutlet weak var OpenButton: UIButton!
     @IBOutlet weak var LaiSeePocketTitle: UILabel!
     @IBOutlet weak var LaiSeePocketBody: UILabel!
     
@@ -25,11 +25,11 @@ class LaiSeePocketViewController: UIViewController {
         
         
     }
-/*
+
     @IBAction func OpenButtonTapped(sender: AnyObject) {
         OpenButton.removeFromSuperview()
     }
-  */  
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

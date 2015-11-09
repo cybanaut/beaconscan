@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
 
@@ -21,6 +22,7 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
     var shopData = [RetailerProfile]!()
     var api : InfuseAPI!
     var LaiSeePocketData : NSDictionary!
+    //var shopData:NSDictionary!
     
     var preferredLanguages : NSLocale!
     var language = NSLocale.preferredLanguages()[0]
@@ -60,10 +62,42 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             
         }
         locationManager.startRangingBeaconsInRegion(region)
+        /*
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        
+        //2
+        let fetchRequest = NSFetchRequest(entityName: "Setting")
+        
+        //3
+        
+        var pageSetting = [NSManagedObject]()
+        var mode:Int!
+        var gender:Int!
+        var ageGroup:Int!
+        do {
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            pageSetting = results as! [NSManagedObject]
+            mode = pageSetting[0].valueForKey("mode") as! Int
+            gender = pageSetting[0].valueForKey("gender") as! Int
+            ageGroup = pageSetting[0].valueForKey("ageGroup") as! Int
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+        
         
         let beaconParm = ["uuid":"F94DBB23-2266-7822-3782-57BEAC0952AC", "major":"1", "minor":"2"]
-        getLaiSee(beaconParm)
-        //getRetailerPage(beaconParm)
+        print(gender)
+        print(mode)
+        print(ageGroup)
+        //if mode == 0{
+          //  getLaiSee(beaconParm)
+        //} else {
+            getRetailerPage(beaconParm)
+        //}
+*/
+
     }
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
@@ -78,9 +112,37 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             // print(closestBeacon.minor);
             // print(closestBeacon.rssi);
             
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            
+            let managedContext = appDelegate.managedObjectContext
+            
+            //2
+            let fetchRequest = NSFetchRequest(entityName: "Setting")
+            
+            //3
+            
+            var pageSetting = [NSManagedObject]()
+            var mode:Int!
+            var gender:Int!
+            var ageGroup:Int!
+            do {
+                let results = try managedContext.executeFetchRequest(fetchRequest)
+                pageSetting = results as! [NSManagedObject]
+                mode = pageSetting[0].valueForKey("mode") as! Int
+                gender = pageSetting[0].valueForKey("gender") as! Int
+                ageGroup = pageSetting[0].valueForKey("ageGroup") as! Int
+            } catch let error as NSError {
+                print("Could not fetch \(error), \(error.userInfo)")
+            }
+            
             let beaconParm = ["uuid":closestBeacon.proximityUUID.UUIDString, "major":closestBeacon.major, "minor":closestBeacon.minor]
-            getLaiSee(beaconParm)
-            //performSegueWithIdentifier("LaiSeeView", sender: self)
+            
+            if mode == 0{
+                getLaiSee(beaconParm)
+            } else {
+                getLaiSee(beaconParm)
+                //getRetailerPage(beaconParm)
+            }
             
             //           print(region);
             //           print(region.proximityUUID);
@@ -92,7 +154,7 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
         let body: NSMutableDictionary = NSMutableDictionary()
         
         body.setValue(parm, forKey: "beacon")
-        body.setValue(language, forKey: "language")
+        //body.setValue(language, forKey: "language")
         //body.setValue("greeting", forKey: "demo")
         
         api.getRetailerProfile(body, completion: { (return_data:[RetailerProfile]) in
@@ -100,8 +162,9 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             print(return_data)
             for item in return_data {
                 self.shopData.append(item)
+                //self.shopData = item as! NSDictionary
                 print("before");
-                print(self.laiSee);
+                print(self.shopData);
             }
             //self.goNextPage()
         })
@@ -146,4 +209,6 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
         }
     }
 
+
 }
+

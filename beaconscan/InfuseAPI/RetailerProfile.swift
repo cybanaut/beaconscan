@@ -17,7 +17,8 @@ class RetailerProfile {
     var short_description :  String!
     var long_description : String!
     var offers : NSArray!
-        
+    
+    var cover_photo_data : NSData?
     init(data : NSDictionary){
         
         self.retailer_id = data["retailer_id"] as! String
