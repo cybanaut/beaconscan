@@ -70,15 +70,15 @@ class InfuseAPI {
         case ConversionFailed = "ERROR: conversion from JSON failed"
     }
 
-   // func getLaiSee(params : NSMutableDictionary, completion: ((returnData : NSDictionary) -> Void)!) {
-func getLaiSee(params : NSMutableDictionary, completion: (([LaiSeeData]) -> Void)!) {
+   //func getLaiSee(params : NSMutableDictionary, completion: ((returnData : NSDictionary) -> Void)!) {
+    func getLaiSee(params : NSMutableDictionary, completion: (([LaiSeeData]) -> Void)!) {
         let request = NSMutableURLRequest(URL: NSURL(string: serverUrl+"getLaiSee.php")!)
         let session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
         
         do {
             request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(params, options: .PrettyPrinted)
-            print(request)
+            // print(request)
         } catch {
             //handle error. Probably return or mark function as throws
             print(error)
@@ -87,14 +87,13 @@ func getLaiSee(params : NSMutableDictionary, completion: (([LaiSeeData]) -> Void
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-
         let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
             // handle error
             guard error == nil else { return }
             
-            print("Response: \(response)")
+            // print("Response: \(response)")
             let strData = NSString(data: data!, encoding: NSUTF8StringEncoding)
-            print("Body: \(strData)")
+            // print("Body: \(strData)")
             
             let json: NSDictionary?
             do {
@@ -114,10 +113,11 @@ func getLaiSee(params : NSMutableDictionary, completion: (([LaiSeeData]) -> Void
             var LaiSeePocket = [LaiSeeData]()
             if let parseJSON = json {
                 // Okay, the parsedJSON is here, let's print all its contents
-                print("return_data: \(parseJSON)")
+                //print("return_data: \(parseJSON)")
                 let return_data = LaiSeeData(data: parseJSON )
                 LaiSeePocket.append(return_data)
                 
+                /*
                 let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
                 let managedContext = appDelegate.managedObjectContext
                 
@@ -141,6 +141,8 @@ func getLaiSee(params : NSMutableDictionary, completion: (([LaiSeeData]) -> Void
                 } catch let error as NSError  {
                     print("Could not save \(error), \(error.userInfo)")
                 }
+                */
+                completion(LaiSeePocket);
 
             }
             else {

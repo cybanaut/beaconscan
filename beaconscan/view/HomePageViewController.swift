@@ -60,8 +60,8 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
         }
         locationManager.startRangingBeaconsInRegion(region)
         
-        let beaconParm = ["uuid":"F94DBB23-2266-7822-3782-57BEAC0952AC", "major":"1", "minor":"2"]
-        getLaiSee(beaconParm)
+        //let beaconParm = ["uuid":"F94DBB23-2266-7822-3782-57BEAC0952AC", "major":"1", "minor":"2"]
+        //getLaiSee(beaconParm)
 
     }
     
@@ -71,15 +71,15 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             locationManager.stopRangingBeaconsInRegion(region);
             spinner.stopAnimating();
             let closestBeacon = knownBeacons[0] as CLBeacon
-             print(closestBeacon);
-            // print(closestBeacon.proximityUUID.UUIDString);
+            // print(closestBeacon);
+             print(closestBeacon.proximityUUID.UUIDString);
             // print(closestBeacon.major);
             // print(closestBeacon.minor);
             // print(closestBeacon.rssi);
             
             let beaconParm = ["uuid":closestBeacon.proximityUUID.UUIDString, "major":closestBeacon.major, "minor":closestBeacon.minor]
             getLaiSee(beaconParm)
-            performSegueWithIdentifier("LaiSeeView", sender: self)
+            //performSegueWithIdentifier("LaiSeeView", sender: self)
             
             //           print(region);
             //           print(region.proximityUUID);
@@ -92,12 +92,15 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
 
         body.setValue(parm, forKey: "beacon")
         body.setValue(language, forKey: "language")
-        body.setValue("greeting", forKey: "demo")
-
+        //body.setValue("greeting", forKey: "demo")
+        
         api.getLaiSee(body, completion: { (return_data:[LaiSeeData]) in
+            print("after completion");
             print(return_data)
             for item in return_data {
                 self.laiSee.append(item)
+                print("before");
+                print(self.laiSee);
             }
             self.goNextPage()
         })
@@ -114,7 +117,7 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             {
                 let passLaiSee = laiSee[0]
                 let controller = segue.destinationViewController as! LaiSeePocketViewController
-                controller.LaiSeePocketData = passLaiSee
+                //controller.LaiSeePocketData = passLaiSee
             }
             
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cRU-ke-Ht2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cRU-ke-Ht2">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -291,6 +291,7 @@
                             </pickerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cja-CP-etM">
                                 <rect key="frame" x="20" y="235" width="335" height="29"/>
+                                <animations/>
                                 <segments>
                                     <segment title="Male"/>
                                     <segment title="Second"/>
@@ -1090,9 +1091,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdJ-Di-9z7">
                                 <rect key="frame" x="279" y="129" width="46" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="HQ8-8N-rT8" kind="show" id="ZYb-SX-nuR"/>
+                                    <segue destination="HQ8-8N-rT8" kind="show" identifier="LaiSeeView" id="ZYb-SX-nuR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1150,15 +1152,18 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CNY-Lai-See-Content.png" translatesAutoresizingMaskIntoConstraints="NO" id="vSu-z3-aRt">
                                 <rect key="frame" x="20" y="250" width="335" height="380"/>
+                                <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGT-c5-XVw">
                                 <rect key="frame" x="20" y="250" width="326" height="45"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="body" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Soo-gq-fxU">
                                 <rect key="frame" x="20" y="303" width="326" height="321"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1240,9 +1245,11 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CNY-Master-Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bjz-GR-z7b">
                                 <rect key="frame" x="-4" y="64" width="378" height="603"/>
+                                <animations/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Zm9-gi-R4e">
                                 <rect key="frame" x="0.0" y="222" width="374" height="401"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RetailerCell" rowHeight="54" id="DB9-DI-CIS" customClass="RetailerCell" customModule="beaconscan" customModuleProvider="target">
@@ -1254,6 +1261,7 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cm1-pg-GFZ">
                                                     <rect key="frame" x="8" y="8" width="40" height="38"/>
+                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="30G-hh-Rri"/>
                                                         <constraint firstAttribute="width" constant="51" id="b60-9Y-DWr" userLabel="width = 50"/>
@@ -1263,11 +1271,13 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kai-uO-OBJ">
                                                     <rect key="frame" x="67" y="16" width="525" height="21"/>
+                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="cm1-pg-GFZ" firstAttribute="leading" secondItem="o33-fJ-6Bh" secondAttribute="leadingMargin" id="8x5-5F-6T6"/>
                                                 <constraint firstItem="kai-uO-OBJ" firstAttribute="leading" secondItem="cm1-pg-GFZ" secondAttribute="trailing" constant="8" symbolic="YES" id="P18-HW-Dp7"/>
@@ -1275,6 +1285,7 @@
                                                 <constraint firstItem="cm1-pg-GFZ" firstAttribute="top" secondItem="o33-fJ-6Bh" secondAttribute="topMargin" id="dG5-SE-ljQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="kai-uO-OBJ" secondAttribute="trailing" constant="8" id="EpE-TC-7I4"/>
                                         </constraints>
@@ -1286,6 +1297,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Zm9-gi-R4e" firstAttribute="leading" secondItem="KxD-4O-XMN" secondAttribute="leadingMargin" constant="-20" id="12m-yg-DvV"/>
@@ -1323,6 +1335,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mr8-qx-Le0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1342,7 +1355,7 @@
         <image name="menu" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aRy-7x-CXW"/>
         <segue reference="97P-CL-L2U"/>
+        <segue reference="WDd-2Q-07J"/>
     </inferredMetricsTieBreakers>
 </document>
