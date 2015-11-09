@@ -20,8 +20,8 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     let ageGroup = ["","Under 20","20-29","30-39","40-49","50-59","60+"]
     var ageGroupVal : Int=0
-    var gender : Int=2
-    var mode : Int=1
+    var gender : Int=0
+    var mode : Int=0
     var pageSetting = [NSManagedObject]()
     
     //let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
@@ -48,9 +48,7 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     
     @IBAction func saveButtonTapped(sender: AnyObject) {
-        // print(111 ,mode)
-        // print(222 ,ageGroupVal)
-        // print(333 ,gender)
+        /*
         //1
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
@@ -76,7 +74,14 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             print("Could not save \(error), \(error.userInfo)")
         }
         showData()
-
+    */
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        defaults.setValue(mode, forKey: defaultsKeys.mode)
+        defaults.setValue(gender, forKey: defaultsKeys.gender)
+        defaults.setValue(ageGroupVal, forKey: defaultsKeys.ageGroup)
+        
+        defaults.synchronize()
         
     }
     
@@ -142,28 +147,10 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         print(row)
         ageGroupVal = row
     }
-    /*
-    func saveData(keyName: String, insertValue:Int) {
-        //1
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let managedContext = appDelegate.managedObjectContext
-        
-        //2
-        let entity =  NSEntityDescription.entityForName("Setting",inManagedObjectContext:managedContext)
-        
-        let setting = NSManagedObject(entity: entity!,insertIntoManagedObjectContext: managedContext)
-        
-        //3
-        setting.setValue(insertValue, forKey:keyName )
-        
-        //4
-        do {
-            try managedContext.save()
-            pageSetting.append(setting)
-            //5
-            //pageSetting = setting
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        }
-    } */
+    enum defaultsKeys {
+        static let mode = "mode"
+        static let gender = "gender"
+        static let ageGroup = "ageGroup"
+    }
+    
     }

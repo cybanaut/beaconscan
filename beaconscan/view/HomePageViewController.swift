@@ -111,7 +111,7 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             // print(closestBeacon.major);
             // print(closestBeacon.minor);
             // print(closestBeacon.rssi);
-            
+            /*
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             
             let managedContext = appDelegate.managedObjectContext
@@ -134,15 +134,22 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             } catch let error as NSError {
                 print("Could not fetch \(error), \(error.userInfo)")
             }
+*/
+            let defaults = NSUserDefaults.standardUserDefaults()
             
+            let mode = defaults.valueForKey("mode")
+            let gender = defaults.valueForKey("gender")
+            let ageGroup = defaults.valueForKey("ageGroup")
+
+                
             let beaconParm = ["uuid":closestBeacon.proximityUUID.UUIDString, "major":closestBeacon.major, "minor":closestBeacon.minor]
             
-            if mode == 0{
+            //if mode == 0{
                 getLaiSee(beaconParm)
-            } else {
-                getLaiSee(beaconParm)
+            //} else {
+            //    getLaiSee(beaconParm)
                 //getRetailerPage(beaconParm)
-            }
+            //}
             
             //           print(region);
             //           print(region.proximityUUID);

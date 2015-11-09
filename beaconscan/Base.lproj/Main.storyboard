@@ -969,6 +969,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="menuButton" destination="wms-bh-4e7" id="Stx-um-gSJ"/>
+                        <segue destination="Hyf-iP-Rpk" kind="show" identifier="LaiSeeView" id="cT7-pq-rtU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LhR-bF-254" userLabel="First Responder" sceneMemberID="firstResponder"/>
