@@ -22,7 +22,7 @@ class RetailerViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         
-        title = "Retailer"
+        title = retailerProfile.name
         
         Utils.asyncLoadRetailerProfileCover(retailerProfile, imageView: profileImageView)
         /*

@@ -174,7 +174,11 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
             print(return_data)
             for item in return_data {
                 print(item)
-                self.shopData.append(item)
+                if self.shopData.count>0 {
+                    self.shopData[0] = item
+                } else {
+                    self.shopData.append(item)
+                }
                 //self.shopData = item as! NSDictionary
                 print("before");
                 print(self.shopData);
