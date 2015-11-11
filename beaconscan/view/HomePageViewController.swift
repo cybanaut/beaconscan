@@ -96,9 +96,10 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
         //} else {
             getRetailerPage(beaconParm)
         //}
-*/
-//let beaconParm = ["uuid":"F94DBB23-2266-7822-3782-57BEAC0952AC", "major":"1", "minor":"2"]
-  //      getRetailerPage(beaconParm)
+
+let beaconParm = ["uuid":"F94DBB23-2266-7822-3782-57BEAC0952AC", "major":"1", "minor":"2"]
+        //getRetailerPage(beaconParm)
+        getLaiSee(beaconParm) */
     }
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
@@ -212,14 +213,16 @@ class HomePageViewController: UIViewController, CLLocationManagerDelegate  {
     }
     func goNextPage() {
         spinner.stopAnimating();
-        performSegueWithIdentifier("LaiSeeView", sender: self)
-
-    }
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.performSegueWithIdentifier("LaiSeeView", sender: nil)
+        }
+            }
     
     func goRetailer() {
         spinner.stopAnimating()
-        performSegueWithIdentifier("retailerView", sender: self)
-    
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.performSegueWithIdentifier("retailerView", sender: nil)
+        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
