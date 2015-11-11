@@ -15,8 +15,8 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var ageGroupPicker: UIPickerView!
     @IBOutlet weak var demoModeLabel: UILabel!
-    @IBOutlet weak var selectModeSwitch: UISwitch!
     @IBOutlet weak var genderSegment: UISegmentedControl!
+    @IBOutlet weak var modeSegment: UISegmentedControl!
     
     let ageGroup = ["","Under 20","20-29","30-39","40-49","50-59","60+"]
     var ageGroupVal : Int=0
@@ -30,8 +30,6 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         super.viewDidLoad()
         ageGroupPicker.dataSource = self
         ageGroupPicker.delegate = self
-        
-        selectModeSwitch.addTarget(self, action: Selector("stateChanged:"), forControlEvents: UIControlEvents.ValueChanged)
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -103,18 +101,20 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         }
     }
     
-    func stateChanged(switchState: UISwitch) {
-        if switchState.on {
-            print("Special Offer Mode")
-            demoModeLabel.text = "Demo Mode: Special Offer"
-            mode = 1
-        } else {
-            print("Lai See Mode")
-            demoModeLabel.text = "Demo Mode: Lai See"
+    @IBAction func selectMode(sender: UISegmentedControl) {
+        switch modeSegment.selectedSegmentIndex
+        {
+        case 0:
+            print("Lai See")
             mode = 0
+        case 1:
+            print("Special Offer")
+            mode = 1
+        default:
+            break;
         }
+
     }
-    
     
     @IBAction func selectGender(sender: UISegmentedControl) {
         switch genderSegment.selectedSegmentIndex

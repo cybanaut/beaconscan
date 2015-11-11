@@ -262,13 +262,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Lai See / Special Offers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEO-bA-qw9">
-                                <rect key="frame" x="20" y="114" width="240" height="39"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlG-FY-L1t">
                                 <rect key="frame" x="20" y="183" width="335" height="21"/>
                                 <animations/>
@@ -283,20 +276,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pEZ-GD-aX0">
-                                <rect key="frame" x="306" y="118" width="51" height="31"/>
-                                <animations/>
-                            </switch>
                             <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XnQ-gZ-YZH">
                                 <rect key="frame" x="0.0" y="288" width="375" height="216"/>
                                 <animations/>
                             </pickerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="of1-cY-KTq">
+                                <rect key="frame" x="20" y="123" width="335" height="29"/>
+                                <segments>
+                                    <segment title="Lai See"/>
+                                    <segment title="Special Offer"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectMode:" destination="Axr-95-dRK" eventType="valueChanged" id="utB-Pl-71O"/>
+                                </connections>
+                            </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cja-CP-etM">
-                                <rect key="frame" x="20" y="235" width="335" height="29"/>
+                                <rect key="frame" x="20" y="212" width="335" height="29"/>
                                 <animations/>
                                 <segments>
                                     <segment title="Male"/>
-                                    <segment title="Second"/>
+                                    <segment title="Female"/>
                                     <segment title="Not Disclosed"/>
                                 </segments>
                                 <connections>
@@ -307,16 +306,16 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="pEZ-GD-aX0" secondAttribute="trailing" id="0UZ-Wd-AKs"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="fEO-bA-qw9" secondAttribute="leading" id="24x-3o-Y0e"/>
                             <constraint firstAttribute="leadingMargin" secondItem="cja-CP-etM" secondAttribute="leading" id="8gP-h4-3FO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XnQ-gZ-YZH" secondAttribute="trailing" constant="-20" id="AOS-AC-WvR"/>
                             <constraint firstAttribute="leadingMargin" secondItem="GLI-58-Llw" secondAttribute="leading" id="EHb-J9-WrO"/>
                             <constraint firstItem="cja-CP-etM" firstAttribute="top" secondItem="kzW-kV-EzP" secondAttribute="bottom" constant="171" id="Fnr-Bp-52g"/>
                             <constraint firstAttribute="leadingMargin" secondItem="cja-CP-etM" secondAttribute="leading" id="Obs-fp-kq7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="of1-cY-KTq" secondAttribute="trailing" id="UZn-mQ-Yck"/>
                             <constraint firstItem="XnQ-gZ-YZH" firstAttribute="leading" secondItem="25G-XE-aFl" secondAttribute="leadingMargin" constant="-20" id="nri-Pi-lB4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IlG-FY-L1t" secondAttribute="trailing" id="t79-R6-pfb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cja-CP-etM" secondAttribute="trailing" id="tfo-W0-W6m"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="of1-cY-KTq" secondAttribute="leading" id="x0x-q6-Iin"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DNQ-dr-dH7" secondAttribute="trailing" id="xyM-Nk-FcQ"/>
                         </constraints>
                     </view>
@@ -332,9 +331,9 @@
                     <connections>
                         <outlet property="ageGroupPicker" destination="XnQ-gZ-YZH" id="33A-Mi-I5g"/>
                         <outlet property="demoModeLabel" destination="GLI-58-Llw" id="ifi-nd-gFI"/>
-                        <outlet property="genderSegment" destination="cja-CP-etM" id="vGa-uU-LUU"/>
+                        <outlet property="genderSegment" destination="cja-CP-etM" id="nGu-QR-ell"/>
                         <outlet property="menuButton" destination="mDB-67-i2X" id="kUv-rv-f5K"/>
-                        <outlet property="selectModeSwitch" destination="pEZ-GD-aX0" id="My4-jZ-fJ7"/>
+                        <outlet property="modeSegment" destination="of1-cY-KTq" id="M6z-NF-hts"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGo-yV-ZM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -369,7 +368,7 @@
                         <viewControllerLayoutGuide type="top" id="4iH-q0-UaR"/>
                         <viewControllerLayoutGuide type="bottom" id="Q8j-vB-cid"/>
                     </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" indicatorStyle="white" id="dMz-vh-rHz">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="dMz-vh-rHz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -377,7 +376,7 @@
                                 <rect key="frame" x="8" y="72" width="359" height="23"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2pE-k4-Zfs">
@@ -396,14 +395,14 @@
                                 <rect key="frame" x="8" y="133" width="359" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Street Address *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0a7-oz-C32">
                                 <rect key="frame" x="8" y="192" width="359" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b83-yv-8KF">
@@ -423,24 +422,24 @@
                                 <rect key="frame" x="8" y="294" width="359" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Postcode/Zip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJP-kJ-aI5">
                                 <rect key="frame" x="8" y="354" width="359" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Province/State *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjF-1P-FYA">
                                 <rect key="frame" x="8" y="415" width="359" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Postcode/Zip" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UCl-4r-uKk">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Postcode/Zip" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UCl-4r-uKk">
                                 <rect key="frame" x="8" y="377" width="359" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -468,21 +467,21 @@
                                 <rect key="frame" x="8" y="474" width="359" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Number *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIV-as-qoi">
                                 <rect key="frame" x="8" y="535" width="359" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aL-at-Udq">
                                 <rect key="frame" x="8" y="602" width="359" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vbo-2M-Cif">
@@ -493,6 +492,12 @@
                             </textField>
                         </subviews>
                         <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="UCl-4r-uKk" secondAttribute="trailing" id="790-Ly-RAj"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="UCl-4r-uKk" secondAttribute="leading" id="TI7-Cy-XNG"/>
+                        </constraints>
                     </scrollView>
                     <navigationItem key="navigationItem" title="Personal Info" id="y4m-XN-9as">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="4DA-ok-vee"/>
