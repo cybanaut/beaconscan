@@ -10,7 +10,7 @@ import Foundation
 
 class RetailerProfile {
     
-    var retailer_id : String!
+    var retailer_id : Int!
     var name : String!
     var cover_photo : String!
     var thumbnail : String!
@@ -21,7 +21,7 @@ class RetailerProfile {
     var cover_photo_data : NSData?
     init(data : NSDictionary){
         
-        self.retailer_id = data["retailer_id"] as! String
+        self.retailer_id = data["retailer_id"] as! Int
         self.name = Utils.getStringFromJSON(data, key: "name")
         self.cover_photo = Utils.getStringFromJSON(data, key: "cover_photo")
         self.thumbnail = Utils.getStringFromJSON(data, key: "thumbnail")

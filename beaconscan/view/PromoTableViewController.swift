@@ -16,6 +16,8 @@ class PromoTableViewController: UIViewController, UITableViewDelegate, UITableVi
     var retailers : [Retailer]!
     var api : InfuseAPI!
     
+    var shopData:[RetailerProfile] = []
+    
     var preferredLanguages : NSLocale!
     var pre = NSLocale.preferredLanguages()[0]
     
@@ -91,8 +93,48 @@ class PromoTableViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        //let info = viewLinks[indexPath.row]
-        //self .performSegueWithIdentifier("retailerPage", sender: self)
+        
+        let info = retailers[indexPath.row]
+        getRetailerPage(info.retailer_id)
     }
+    
+    func getRetailerPage(parm : Int) {
+        let body: NSMutableDictionary = NSMutableDictionary()
+        
+        body.setValue(parm, forKey: "retailer_id")
+        //body.setValue(language, forKey: "language")
+        //body.setValue("greeting", forKey: "demo")
+        
+        api.getRetailerProfile(body, completion: { (return_data:[RetailerProfile]) in
+            print("after completion");
+            //print(return_data)
+            for item in return_data {
+                print(item)
+                if self.shopData.count>0 {
+                    self.shopData[0] = item
+                } else {
+                    self.shopData.append(item)
+                }
+                dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                    self .performSegueWithIdentifier("retailerPageView", sender: self)
+                }
+            }
+        })
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "retailerPageView"){
+            if  shopData.count>0
+            {
+                let passRetailer = shopData[0]
+                let controller = segue.destinationViewController as! RetailerViewController
+                controller.retailerProfile = passRetailer
+            }
+            
+        }
+        
+    }
+
+
     
 }
