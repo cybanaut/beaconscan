@@ -13,11 +13,12 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
 
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    @IBOutlet weak var ageGroupPicker: UIPickerView!
+    //@IBOutlet weak var ageGroupPicker: UIPickerView!
     @IBOutlet weak var demoModeLabel: UILabel!
     @IBOutlet weak var genderSegment: UISegmentedControl!
     @IBOutlet weak var modeSegment: UISegmentedControl!
     
+    @IBOutlet weak var AgeGroupTextField: UITextField!
     let ageGroup = ["","Under 20","20-29","30-39","40-49","50-59","60+"]
     var ageGroupVal : Int=0
     var gender : Int=0
@@ -28,8 +29,8 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ageGroupPicker.dataSource = self
-        ageGroupPicker.delegate = self
+        //ageGroupPicker.dataSource = self
+        //ageGroupPicker.delegate = self
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -147,6 +148,23 @@ class SettingViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         print(row)
         ageGroupVal = row
     }
+    
+    @IBAction func AgeGroupTextFieldTapped(sender: AnyObject) {
+        let alertView = UIAlertController(title: "Select Age Group", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        /*
+        pickerView = UIPickerView(frame: CGRectMake(0, 0, 250, 60))
+        pickerView?.dataSource = self
+        pickerView?.delegate = self
+        
+        alertView.view.addSubview(pickerView!)
+        
+        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+        
+        alertView.addAction(action)
+        presentViewController(alertView, animated: true, completion: nil) */
+        
+    }
+    
     enum defaultsKeys {
         static let mode = "mode"
         static let gender = "gender"

@@ -14,7 +14,7 @@ class RetailerViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var profileImageView: UIImageView!
     
     var retailerProfile : RetailerProfile!
-    var offers : [Offer]!
+    var offers = [Offer]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,8 +81,22 @@ class RetailerViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         //let info = viewLinks[indexPath.row]
-        //self .performSegueWithIdentifier("retailerPage", sender: self)
+        self .performSegueWithIdentifier("offerDetailsView", sender: self)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "offerDetailsView"){
+            for eachOffer in retailerProfile.offers {
+                let offer = Offer(data: eachOffer as! NSDictionary)
+                offers.append(offer)
+            }
+            
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let controller = segue.destinationViewController as! OfferDetailsViewController
+                controller.offerDetails = offers[row]
+            }
+        }
+    }
+
 
 }

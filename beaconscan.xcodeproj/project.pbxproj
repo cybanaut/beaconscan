@@ -19,6 +19,7 @@
 		FB2BA9091BE7AC9500CC110B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2BA9081BE7AC9500CC110B /* SWRevealViewController.m */; };
 		FB2BA90E1BE7C14500CC110B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2BA90D1BE7C14500CC110B /* SettingViewController.swift */; };
 		FB2BA9101BE7C2C700CC110B /* LaiSeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2BA90F1BE7C2C700CC110B /* LaiSeeViewController.swift */; };
+		FB4CDBB11BF6354300277179 /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4CDBB01BF6354300277179 /* OfferDetailsViewController.swift */; };
 		FB854D6C1BF0C57C00077FE3 /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB854D6B1BF0C57C00077FE3 /* OfferCell.swift */; };
 		FB854D701BF0DFA900077FE3 /* RetailerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB854D6F1BF0DFA900077FE3 /* RetailerViewController.swift */; };
 		FB94B1431BE8310600D3E5DC /* LaiSeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB94B1421BE8310600D3E5DC /* LaiSeeTableViewController.swift */; };
@@ -102,6 +103,7 @@
 		FB2BA9081BE7AC9500CC110B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		FB2BA90D1BE7C14500CC110B /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = beaconscan/view/SettingViewController.swift; sourceTree = SOURCE_ROOT; };
 		FB2BA90F1BE7C2C700CC110B /* LaiSeeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaiSeeViewController.swift; path = beaconscan/view/LaiSeeViewController.swift; sourceTree = SOURCE_ROOT; };
+		FB4CDBB01BF6354300277179 /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OfferDetailsViewController.swift; path = view/OfferDetailsViewController.swift; sourceTree = "<group>"; };
 		FB854D6B1BF0C57C00077FE3 /* OfferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
 		FB854D6F1BF0DFA900077FE3 /* RetailerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RetailerViewController.swift; path = view/RetailerViewController.swift; sourceTree = "<group>"; };
 		FB94B1421BE8310600D3E5DC /* LaiSeeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LaiSeeTableViewController.swift; path = beaconscan/view/LaiSeeTableViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -252,6 +254,7 @@
 				FBDB414F1BEE576500F1B88C /* HomePageViewController.swift */,
 				FBDB41611BEEAD0F00F1B88C /* LaiSeePocketViewController.swift */,
 				FB854D6F1BF0DFA900077FE3 /* RetailerViewController.swift */,
+				FB4CDBB01BF6354300277179 /* OfferDetailsViewController.swift */,
 			);
 			name = view;
 			path = beaconscan;
@@ -532,6 +535,7 @@
 				FB2BA9101BE7C2C700CC110B /* LaiSeeViewController.swift in Sources */,
 				FBDB41621BEEAD0F00F1B88C /* LaiSeePocketViewController.swift in Sources */,
 				FB94B19C1BEA310F00D3E5DC /* InfuseAPI.swift in Sources */,
+				FB4CDBB11BF6354300277179 /* OfferDetailsViewController.swift in Sources */,
 				4976B7E01BE5887A009E794E /* ViewController.swift in Sources */,
 				FB94B1881BE9198700D3E5DC /* CategoryCell.swift in Sources */,
 				FBDB415A1BEE6BDB00F1B88C /* Setting+CoreDataProperties.swift in Sources */,
